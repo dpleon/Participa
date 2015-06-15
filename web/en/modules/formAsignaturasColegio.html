@@ -1,0 +1,110 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE ASIGNATURAS DEL COLEGIO -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarAsignaturaColegio').click(function(event){
+				        if( prdgm_validarSelectDIV('slctAsignaturaMAN','Asignatura MEN') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldAsignaturaColegio','Asignatura') == false) return false;
+						// se envia datos del formulario				        
+				    });
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Register - parameterization School Subjects</h2>
+					</div>
+					<div class="article_content">
+						<div class="form">
+							<form action="" method="get">
+								<div class="form_content">
+									<p>This form must be entered subjects describing College established by each component to assess.</p>
+									<div class="form_field form_field_3">
+										<label for="slctAsignaturaMAN"><h3>Subject MNE:<sup class="required"> * </sup></h3></label>
+										<select id="slctAsignaturaMAN" name="slctAsignaturaMAN">
+											<option value="">Select</option>
+											<option value="Ciencias Sociales">Social Science</option>
+											<option value="Ciencias Naturales">Natural Sciences</option>
+											<option value="Educacion Artística">Artistic Education</option>
+											<option value="Educacion ética">Ethics Education</option>
+											<option value="Educación física">Sport Education</option>
+											<option value="Idiomas Extranjeros">Foreign Languages</option>
+											<option value="Lengua castellana">Spanish Language</option>
+											<option value="Matemáticas">Mathematics</option>
+										</select>
+									</div>
+									<div class="form_field form_field_3">
+										<label for="txtfldAsignaturaColegio"><h3>Subject:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldAsignaturaColegio" id="txtfldAsignaturaColegio" placeholder="Example: Physical">
+									</div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" name="btnSbmtRegistrarAsignaturaColegio" id="btnSbmtRegistrarAsignaturaColegio">Register</button>
+										<button type="submit" name="btnSbmtActualizarAsignaturaColegio" id="btnSbmtActualizarAsignaturaColegio">Update</button>
+										<button type="submit" name="btnSbmtConsultarAsignaturaColegio" id="btnSbmtConsultarAsignaturaColegio">Consult</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="clear"></div>
+						<h2>LIST OF SUBJECTS UPLOADED</h2>
+						<div class="table_content">
+							<table class="listas">
+								<tr>
+									<th>
+										Subject MNE
+									</th>
+									<th>
+										Subject School
+									</th>
+									<th style="width: 15px;">
+										Load
+									</th>
+									<th style="width: 15px;">
+										Estate
+									</th>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										Natural Sciences
+									</td>
+									<td>
+										Physical
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								<tr class="fila_listas">
+									<td>
+										Spanish Language
+									</td>
+									<td>
+										Spanish Language
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+									</td>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										Mathematics
+									</td>
+									<td>
+										Calculus
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>

@@ -1,0 +1,69 @@
+				<!-- LISTADO DE OBSERVACIONES  -->
+				<script>
+				$(document).ready(function(){
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Observaciones</h2>
+					</div>
+					<div class="article_content" >
+						<!-- LISTA DE ASIGNATURAS -->
+						<p>En este listado se encontrará el listado de las observaciones realizadas al estudiante. Las actividades no vistas por el estudiante se verán en color azul.</p>
+						<div class="clear"></div>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Fecha
+										</th>
+										<th style="width: 70%;">
+											Observación
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="no_visto">
+										<td>
+											2015-03-15
+										</td>
+										<td>
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											2015-03-15
+										</td>
+										<td style="width: 70%;">
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

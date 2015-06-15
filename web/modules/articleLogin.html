@@ -1,0 +1,71 @@
+				<!-- ARTICULO QUE MUESTRA EL PERFIL DEL USUARIO LOGEADO -->
+				<div class="article">
+					<div class="article_title">
+						<h2>Bienvenido</h2>
+					</div>
+					<div class="article_content" style="text-align: center;">
+	                    <h2>Diego Castañeda</h2>
+	                    <h3>Docente</h3>
+						<div class="image_content">
+							<img src="image/photo/default_user.jpg"/> 
+						</div>
+	                    <h4>Colegio O.E.A Institución Educativa Distrital</h4>
+					</div>
+				</div>
+				<!-- FIN ARTICULO QUE MUESTRA EL PERFIL DEL USUARIO LOGEADO -->
+
+				<!-- ARTICULO PARA NOTIFICACIONES DE USUARIO -->
+				<div class="article">
+					<!-- SCRIPT DE PROGRAMACION DEL MENU  -->
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('li#mnuTareas').click(function(){$('#col_central').load('modules/lstTareas.html');});
+							$('li#mnuRecuperaciones').click(function(event){$('#col_central').load('modules/lstRecuperaciones.html');});
+
+							$('li#mnuLstObservaciones').click(function(event){$('#col_central').load('modules/lstObservaciones.html');});
+							$('li#mnuLstCitaciones').click(function(event){$('#col_central').load('modules/lstCitaciones.html');});
+							// $('li#mnuSanciones').click(function(event){$('#col_central').load('modules/lstSanciones.html');});
+						});
+					</script>
+					<div class="article_title">
+						<h2>agenda</h2>
+					</div>
+					<div class="article_menu">
+						<ul class="menu">
+							<li class="nivel1" id="">Académica</li>
+							<li class="nivel2" id="mnuTareas"><span class="badge sin_leer">4</span>Tareas</li>
+							<li class="nivel2" id="mnuRecuperaciones"><span class="badge">1</span>Recuperaciones</li>
+
+							<li class="nivel1" id="">Disciplinaria</li>
+							<li class="nivel2" id="mnuLstObservaciones"><span class="badge">0</span>Observaciones</li>
+							<li class="nivel2" id="mnuLstCitaciones"><span class="badge sin_leer">1</span>Citaciones</li>
+							<!-- <li class="nivel2" id="mnuSanciones"><span class="badge">0</span>Sanciones</li> -->
+						</ul>
+					</div>
+				</div>
+				<!-- FIN ARTICULO PARA NOTIFICACIONES DE USUARIO -->
+
+				<!-- ARTICULO PARA ACCIONES DE LOS USUARIOS -->
+				<div class="article">
+					<!-- SCRIPT DE PROGRAMACION DEL MENU  -->
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('li#mnuCambiarClave').click(function(){$('#col_central').load('modules/formCambiarClave.html');});
+							$('li#mnuCambiarCorreo').click(function(event){$('#col_central').load('modules/formCambiarCorreo.html');});
+						});
+					</script>
+					<div class="article_title">
+						<h2>Acciones de usuario</h2>
+					</div>
+					<div class="article_menu">
+						<ul class="menu">
+							<li class="nivel1" id="">Perfiles</li>
+							<li class="nivel2" id="mnuDocente"><span class="glyphicon glyphicon-user"></span>Docente (Colegio OEA)</li>
+							<li class="nivel2" id="mnuCoordDisciplinario"><span class="glyphicon glyphicon-user"></span>Coordinador Disciplinario (Colegio OEA)</li>
+
+							<li class="nivel1" id="">Salir</li>
+							<li class="nivel2" id="mnuSalir"><span class="glyphicon glyphicon-off"></span>Salir</li>
+						</ul>
+					</div>
+				</div>
+				<!-- FIN ARTICULO PARA ACCIONES DE LOS USUARIOS -->

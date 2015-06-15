@@ -1,0 +1,141 @@
+				<!-- ARTICULO PARA ADMINISTRAR CITACIONES -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarObservacion').click(function(event){
+				        if( prdgm_validarTextoDIV('dateFechaEmision','Fecha de emisión') == false) return false;
+				        if( prdgm_validarSelectDIV('slctCurso','Curso') == false) return false;
+				        if( prdgm_validarNumeroDIV('txtfldDocumentoEstudiante','Documento') == false) return false;
+				        if( prdgm_validarSelectDIV('slctNombreEstudiante','Nombre Estudiante') == false) return false;
+				        if( prdgm_validarTextAreaDIV('txtareaDetalleObservacion','Detalle de la observación') == false) return false;
+						// se envia datos del formulario
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+					// llamar calendario
+					$("#dateFechaEmision").datepicker({
+						dateFormat: "yy-mm-dd",
+						changeYear: true,
+						beforeShowDay: $.datepicker.noWeekends
+					});
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Observaciones</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarObservaciones" name="formAdministrarObservaciones">
+								<div class="form_content" >
+									<p>En el siguiente formulario por favor diligencie los detalles de la citación.</p>
+									<div class="form_field form_field_4" >
+										<label for="dateFechaEmision"><h3>Fecha de emisión:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="dateFechaEmision" id="dateFechaEmision"  placeholder="Ej: 2014-12-31" readonly="readonly" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="slctCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+										<select id="slctCurso" name="slctCurso">
+											<option value="">Seleccione</option>
+											<option value="101">101</option>
+											<option value="201">201</option>
+											<option value="301">301</option>
+											<option value="401">401</option>
+											<option value="501">501</option>
+											<option value="601">601</option>
+										</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3" >
+										<label for="txtfldDocumentoEstudiante"><h3>Documento:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoEstudiante" id="txtfldDocumentoEstudiante"  placeholder="Ej: 81040202781" >
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="slctNombreEstudiante"><h3>Nombre Estudiante:<sup class="required"> * </sup></h3></label>
+										<select id="slctNombreEstudiante" name="slctNombreEstudiante">
+											<option value="">Seleccione</option>
+											<option value="pordefectonmbre">alumno 1</option>
+											<option value="viene tabla alumnos">alumno 2</option>
+										</select>
+									</div>	  
+                                    <div class="clear"></div>
+									<div class="form_field form_field_1">
+										<label for="txtareaDetalleObservacion"><h3>Detalle de la observación:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaDetalleObservacion" name="txtareaDetalleObservacion" placeholder="Breve descripción de la causa de la observación" ></textarea>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) campos obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarObservacion" id="btnSbmtRegistrarObservacion">Registrar</button>
+										<button type="submit" name="btnSbmtActualizarObservacion" id="btnSbmtActualizarObservacion">Editar</button>
+										<button type="submit" name="btnSbmtConsultarObservacion" id="btnSbmtConsultarObservacion">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LISTA DE OBSERVACIONES  -->
+						<h2>Resumen de Observaciones</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											documento
+										</th>
+										<th>
+											Estudiante
+										</th>
+										<th>
+											Curso
+										</th>
+										<th style="width: 15px;">
+											fecha
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											1025484865
+										</td>
+										<td>
+											Pepito Perez
+										</td>
+										<td>
+											701
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											1254597954
+										</td>
+										<td>
+											Pablo Marmol
+										</td>
+										<td>
+											1103
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+

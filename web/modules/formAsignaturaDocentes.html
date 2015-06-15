@@ -1,0 +1,165 @@
+				<!-- ARTICULO PARA ADMINISTRAR LA AGENDA -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarAsignaturaDocente').click(function(event){
+				        if( prdgm_validarSelectDIV('slctAsignaturaColegio','Asignatura') == false) return false;
+				        if( prdgm_validarSelectDIV('slctCodigoCurso','Curso') == false) return false;
+				        if( prdgm_validarSelectDIV('slctNombreDocente','Docente') == false) return false;
+						// se envia datos del formulario
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Asignatura-Docente</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get">
+								<div class="form_title">
+									<h2></h2>
+								<div class="form_content" >
+									<p>En el siguiente formulario debe ingresar la nota por cada una de las tareas y/o actividades asignadas</p>
+									<div class="form_field form_field_4" >
+										<label for="slctAsignaturaColegio"><h3>Asignatura:<sup class="required"> * </sup></h3></label>
+										<select name="slctAsignaturaColegio" id="slctAsignaturaColegio">
+											<option value="">Seleccione</option>
+											<option value="Ciencias Sociales">Ciencias sociales</option>
+											<option value="Ciencias Naturales">Ciencias naturales</option>
+											<option value="Educacion Artística">Educacion artística</option>
+											<option value="Educacion ética">Educacion ética</option>
+											<option value="Educación física">Educación física</option>
+											<option value="Idiomas Extranjeros">Idiomas extranjeros</option>	
+											<option value="Lengua castellana">Lengua castellana</option>
+											<option value="Matemáticas">Matemáticas</option>
+										</select>
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="slctCodigoCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+										<select name="slctCodigoCurso" id="slctCodigoCurso">
+											<option value="">Seleccione</option>
+											<option value="101a">101A</option>
+											<option value="201a">201A</option>
+											<option value="301a">301A</option>
+											<option value="401a">401A</option>
+											<option value="501a">501A</option>
+											<option value="601a">601A</option>
+											</select>
+									</div>	
+									<div class="form_field form_field_2" >
+										<label for="slctNombreDocente"><h3>Docente:<sup class="required"> * </sup></h3></label>
+										<select id="slctNombreDocente" name="slctNombreDocente">
+											<option value="">Seleccione</option>
+											<option value="vienetablatareas">vienetabladocente</option>
+											<option value="vienetablatareas">Rubiano MaryLuz</option>
+										</select>
+									</div>	
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarAsignaturaDocente" id="btnSbmtRegistrarAsignaturaDocente" value="btnSbmtRegistrarAsignaturaDocente">Agregar</button>
+										<button type="submit" name="btnSbmtActualizarAsignaturaDocente" id="btnSbmtActualizarAsignaturaDocente" value="btnSbmtActualizarAsignaturaDocente">Actualizar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<h2>LISTA DE ASIGNATURAS Y DOCENTES</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Asignatura
+										</th>
+										<th>
+											Curso
+										</th>
+										<th>
+											Docente
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>									
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											Ciencias Naturales
+										</td>
+										<td>
+											401A
+										</td>
+										<td>
+											Cardenas Sanchez Manuel
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											Español
+										</td>
+										<td>
+											101a
+										</td>
+										<td>
+											Duarte Casas Sandra
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											Español
+										</td>
+										<td>
+											101a
+										</td>
+										<td>
+											Jessica Villamil Roman
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											Matematicas
+										</td>
+										<td>
+											101a
+										</td>
+										<td>
+											Castellanos Martha Cecilia
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

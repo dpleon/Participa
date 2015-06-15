@@ -1,0 +1,127 @@
+				<!-- ARTICULO PARA ADMINISTRAR CITACIONES -->
+				<script>
+					$(document).ready(function(){
+						// validacion del formulario
+					    $('button#btnSbmtRegistrarObservacion').click(function(event){
+					        if( prdgm_validarTextoDIV('dateFechaEmision','Fecha de emisión') == false) return false;
+					        if( prdgm_validarSelectDIV('slctCurso','Curso') == false) return false;
+					        if( prdgm_validarNumeroDIV('txtfldDocumentoEstudiante','Documento') == false) return false;
+					        if( prdgm_validarSelectDIV('slctNombreEstudiante','Nombre Estudiante') == false) return false;
+					        if( prdgm_validarTextAreaDIV('txtareaDetalleObservacion','Detalle de la observación') == false) return false;
+							// se envia datos del formulario
+					    });
+					});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Observations</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarObservaciones" name="formAdministrarObservaciones">
+								<div class="form_content" >
+									<p>In the form below, please fill out the details of the citation.</p>
+									<div class="form_field form_field_4" >
+										<label for="dateFechaEmision"><h3>Date of issue:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="dateFechaEmision" id="dateFechaEmision"  placeholder="Example: 2014-12-31"  >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="slctCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+										<select id="slctCurso" name="slctCurso">
+											<option value="">Select</option>
+											<option value="101">101A</option>
+											<option value="201">201A</option>
+											<option value="301">301A</option>
+											<option value="401">401A</option>
+											<option value="501">501A</option>
+											<option value="601">601A</option>
+										</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3" >
+										<label for="txtfldDocumentoEstudiante"><h3>Document:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoEstudiante" id="txtfldDocumentoEstudiante"  placeholder="Example: 81040202781" >
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="slctNombreEstudiante"><h3>Estudent Name:<sup class="required"> * </sup></h3></label>
+										<select id="slctNombreEstudiante" name="slctNombreEstudiante">
+											<option value="">Select</option>
+											<option value="pordefectonmbre">Student 1</option>
+											<option value="viene tabla alumnos">Student 2</option>
+										</select>
+									</div>	  
+                                    <div class="clear"></div>
+									<div class="form_field form_field_1">
+										<label for="txtareaDetalleObservacion"><h3>Detail of observation:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaDetalleObservacion" name="txtareaDetalleObservacion" placeholder="Brief description of the cause of observation" ></textarea>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" name="btnSbmtRegistrarObservacion" id="btnSbmtRegistrarObservacion">Register</button>
+										<button type="submit" name="btnSbmtActualizarObservacion" id="btnSbmtActualizarObservacion">Update</button>
+										<button type="submit" name="btnSbmtConsultarObservacion" id="btnSbmtConsultarObservacion">Consult</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LISTA DE OBSERVACIONES  -->
+						<h2>List of Observations</h2>
+						<div class="table_content">
+							<table class="listas">
+								<tr>
+									<th>
+										document
+									</th>
+									<th>
+										Estudent
+									</th>
+									<th>
+										Grade
+									</th>
+									<th style="width: 15px;">
+										Date
+									</th>
+									<th style="width: 15px;">
+										Estate
+									</th>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										1025484865
+									</td>
+									<td>
+										Diego Andrés Castañeda Hurtado
+									</td>
+									<td>
+										701A
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										1254597954
+									</td>
+									<td>
+										Luis Miguel Mora
+									</td>
+									<td>
+										1103B
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+

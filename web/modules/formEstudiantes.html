@@ -1,0 +1,214 @@
+				<!-- ARTICULO PARA ADMINISTRAR ESTUDIANTES -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldDocumentoEstudiante");
+					// validacion del formulario
+				    $('button#btnsbmtRegistrarEstudiante').click(function(event){
+				    	// validacion datos estudiante
+						if( prdgm_validarNumeroDIV('txtfldDocumentoEstudiante','Número de identificación') == false) return false;
+						if( prdgm_validarSelectDIV('slctCurso','Curso') == false) return false;
+						if( prdgm_validarTextoDIV('txtfldPrimerNombreEstudiante','Primer Nombre') == false) return false;
+						if( prdgm_validarTextoDIV('txtfldPrimerApellidoEstudiante','Primer Apellido') == false) return false;
+						if( prdgm_validarTextoDIV('txtfldDireccionEstudiante','Dirección') == false) return false;
+						if( prdgm_validarTextoDIV('txtfldTelefonoEstudiante','Teléfono') == false) return false;
+						if( prdgm_validarTextoDIV('dateNacimientoEstudiante','Fecha Nacimiento') == false) return false;
+						if( prdgm_validarEmailDIV('emailEmailEstudiante','E-mail') == false) return false;
+				    	// validacion datos acudiente
+				        if( prdgm_validarNumeroDIV('txtfldDocumentoAcudiente','Número de identificación') == false) return false;
+		                if( prdgm_validarSelectDIV('slctParentezco','Parentezco') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldPrimerNombreAcudiente','Primer Nombre') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldPrimerApellidoAcudiente','Primer Apellido') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldTelefonoAcudiente','Teléfono') == false) return false;
+		                if( prdgm_validarEmailDIV('emailEmailAcudiente','E-mail') == false) return false;
+						// se envia datos del formulario
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Administrar Estudiantes</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarEstudiantes" name="formAdministrarEstudiantes">
+								<div class="form_content" >
+									<p>En el siguiente formulario se administra la información de los estudiantes del colegio, puede crear, consultar o dar de baja un estudiante.</p>
+									<div class="form_field form_field_3" >
+										<label for="txtfldDocumentoEstudiante"><h3>Número de identificación:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoEstudiante" id="txtfldDocumentoEstudiante" placeholder="Ej: 1234567997" >
+									</div>
+									<div class="form_field form_field_6">
+										<label for="slctCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+										<select id="slctCurso" name="slctCurso">
+											<option value="">Curso</option>
+											<option value="601">601</option>
+											<option value="602">602</option>
+											<option value="603">603</option>
+											<option value="604">604</option>
+											<option value="701">701</option>
+											<option value="702">702</option>
+											<option value="703">703</option>
+											<option value="704">704</option>
+											<option value="801">801</option>
+											<option value="802">802</option>
+											<option value="803">803</option>
+											<option value="901">901</option>
+											<option value="902">902</option>
+											<option value="903">903</option>
+											<option value="1001">1001</option>
+											<option value="1002">1002</option>
+											<option value="1003">1003</option>
+											<option value="1101">1101</option>
+											<option value="1102">1102</option>
+											<option value="1103">1103</option>
+										</select>
+									</div>
+                                    <div class="clear">
+									<div class="form_field form_field_4" >
+										<label for="txtfldPrimerNombreEstudiante"><h3>Primer Nombre:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerNombreEstudiante" id="txtfldPrimerNombreEstudiante" placeholder="Ej: Maria" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="txtfldSegundoNombreEstudiante"><h3>Segundo Nombre:</h3></label>
+										<input type="text" name="txtfldSegundoNombreEstudiante" id="txtfldSegundoNombreEstudiante" placeholder="Ej: José" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="txtfldPrimerApellidoEstudiante"><h3>Primer Apellido:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerApellidoEstudiante" id="txtfldPrimerApellidoEstudiante" placeholder="Ej: Mora" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="txtfldSegundoApellidoEstudiante"><h3>Segundo Apellido:</h3></label>
+										<input type="text" name="txtfldSegundoApellidoEstudiante" id="txtfldSegundoApellidoEstudiante" placeholder="Ej: Sanabria" >
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_2" >
+										<label for="txtfldDireccionEstudiante"><h3>Dirección:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDireccionEstudiante" id="txtfldDireccionEstudiante" placeholder="Ej: Calle 56 No. 87-15" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="txtfldTelefonoEstudiante"><h3>Teléfono:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTelefonoEstudiante" id="txtfldTelefonoEstudiante" placeholder="Ej: (571) 123456789" >
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="dateNacimientoEstudiante"><h3>Fecha Nacimiento:<sup class="required"> * </sup></h3></label>
+										<input type="date" name="dateNacimientoEstudiante" id="dateNacimientoEstudiante" placeholder="Ej: 2007-03-01" >
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3">
+										<label for="emailEmailEstudiante"><h3>E-mail:<sup class="required"> * </sup></h3></label>
+										<input type="email" name="emailEmailEstudiante" id="emailEmailEstudiante" placeholder="Ej: mail@mail.com" >
+									</div>
+									<h2>Acudientes</h2>
+									<div class="form_field form_field_3" >
+										<label for="txtfldDocumentoAcudiente"><h3>Número de identificación:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoAcudiente" id="txtfldDocumentoAcudiente" placeholder="Ej: 1234567997" >
+									</div>
+									<div class="form_field form_field_5">
+										<label for="slctParentezco"><h3>Parentezco:<sup class="required"> * </sup></h3></label>
+										<select id="slctParentezco" name="slctParentezco">
+											<option value="">Parentezco</option>
+											<option value="Padre">Padre</option>
+											<option value="Madre">Madre</option>
+											<option value="Tío">Tío</option>
+											<option value="Tía">Tía</option>
+											<option value="Abuelo">Abuelo</option>
+											<option value="Abuela">Abuela</option>
+											<option value="Primo">Primo</option>
+											<option value="Prima">Prima</option>
+											<option value="Hermano">Hermano</option>
+											<option value="Hermana">Hermana</option>
+											<option value="Otro">Otro</option>
+										</select>
+									</div>
+                                    <div class="clear">
+									 <div class="form_field form_field_4" >
+										<label for="txtfldPrimerNombreAcudiente"><h3>Primer Nombre:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerNombreAcudiente" id="txtfldPrimerNombreAcudiente" placeholder="Ej: Maria" >
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoNombreAcudiente"><h3>Segundo Nombre:</h3></label>
+										<input type="text" name="txtfldSegundoNombreAcudiente" id="txtfldSegundoNombreAcudiente" placeholder="Ej: José" >
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldPrimerApellidoAcudiente"><h3>Primer Apellido:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerApellidoAcudiente" id="txtfldPrimerApellidoAcudiente" placeholder="Ej: Mora" >
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoApellidoAcudiente"><h3>Segundo Apellido:</h3></label>
+										<input type="text" name="txtfldSegundoApellidoAcudiente" id="txtfldSegundoApellidoAcudiente" placeholder="Ej: Sanabria" >
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_4" >
+										<label for="txtfldTelefonoAcudiente"><h3>Teléfono:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTelefonoAcudiente" id="txtfldTelefonoAcudiente" placeholder="Ej: (571) 123456789" >
+									</div>
+									<div class="form_field form_field_3">
+										<label for="emailEmailAcudiente"><h3>E-mail:<sup class="required"> * </sup></h3></label>
+										<input type="email" name="emailEmailAcudiente" id="emailEmailAcudiente" placeholder="Ej: mail@mail.com" >
+									</div>
+									<h3>
+										<button type="button" id="btnAgregarAcudiente" name=""><span class="glyphicon glyphicon-plus"></span></button>
+										Agregar acudiente 										
+									</h3>
+									<div class="clear"> </div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" id="btnsbmtRegistrarEstudiante" name="">Registrar</button>
+										<button type="submit" id="btnsbmtActualizarEstudiante" name="">Actualizar</button>
+										<button type="submit" id="btnsbmtConsultarEstudiante" name="">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="clear"></div>
+						<!-- LISTA DE COLEGIOS  -->
+						<h2>Listado de Estudiantes</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Identificación
+										</th>
+										<th>
+											Estudiante
+										</th>
+										<th>
+											Curso
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>									
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											80157258 
+										</td>
+										<td>
+											Luis Miguel Mora
+										</td>
+										<td>
+											701
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./Templates/TemplateParticipa.xhtml">
+            <ui:define name="scripts">
+                <script>
+                    $(document).ready(function(){
+                        // validacion del formulario de logeo
+                        $('button#btnLogin').click(function(event){
+                            if( prdgm_validarTextoDIV('txtfldUsuario','Clave') == false) return false;
+                            if( prdgm_validarTextoDIV('pswdUsuario','Contraseña') == false) return false;
+                            $('#col_izquierda').load('modules/mnuUsuarios.html');
+                            $('#col_derecha').load('modules/articleLogin.html');
+                        });
+
+                        // redireccion al formulario de recordar contraseña
+                        $('a#linkRecordarClave').click(function(){
+                            $('#col_central').load('modules/formRecuperarClave.html');
+                        });
+                    });
+                </script>
+            </ui:define>
+
+            <ui:define name="left">
+                <!-- ARTICULO DE PRUEBA PARA DE CONTENIDO DE TEXTOS -->
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Proyectos</h2>
+                    </div>
+                    <div class="article_content">
+                        <h2>Educación Inclusiva para Niños y Jóvenes con Limitación Visual Aula Regular</h2>
+                        <h3>MITO O REALIDAD</h3>
+                        <!-- <h4>Eam ut ponderum quaestio</h4> -->
+                        <p> existe en la sociedad una población cuyas necesidades e intereses comenzarán a ser truncada de la primera infancia, nos referimos a las personas con limitación visual n; a veces, cuando uno de los miembros de la familia con discapacidad lleva al conflicto, que por lo tanto afecta a la persona afectada, mientras que esta situación se multiplica cuando la sociedad a través de la indiferencia o la ignorancia empieza a cerrar sus puertas a principios de realización.</p>
+                        <br /> tomado de <br />
+                        http://www.redacademica.edu.co/webcolegios / 08 / OEA / p_invidentes.html
+                    </div>
+                </div>
+            </ui:define>
+
+            <ui:define name="content">
+                <!-- ARTICULO DE LA LANDING PAGE  -->
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Noticias</h2>
+                    </div>
+                    <div class="article_content">
+                        <h2>Una fiesta afroamericana en Kennedy</h2>
+                        <p>En un evento de integración multicultural y multiétnica, 2.200 estudiantes del colegio OEA se tomaron las instalaciones con representaciones teatrales, muestras de folclor y danzas en representación de los principales pueblos del continente africano.</p>  
+                        <!-- <h4></h4>-->
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="image/afrooea1.jpg" alt="IMG_01" />
+                                    <div class="carousel-caption">Muchos niños</div>
+                                </div>
+                                <div class="item">
+                                    <img src="image/afrooea2.jpg" alt="IMG_02" />
+                                    <div class="carousel-caption">Felices</div>
+                                </div>
+                                ...
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <p> tomado de http://www.escuelaparapadresymadres.org/site/index.</p>
+                    </div>
+                </div>
+            </ui:define>
+
+            <ui:define name="right">
+                <!-- ARTICULO DE LOGIN -->
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Ingresar</h2>
+                    </div>
+                    <div class="form">
+                        <form action="" method="post">
+                            <div class="form_content">
+                                <div class="form_field form_field_1">
+                                    <input type="text" name="txtfldUsuario" id="txtfldUsuario" placeholder="Usuario" />
+                                </div>
+                                <div class="form_field form_field_1">
+                                    <input type="password" name="pswdUsuario" id="pswdUsuario" placeholder="Contraseña" />
+                                </div>
+                                <div class="form_button_box form_field form_field_1" style="text-align: center;">
+                                    <button type="button" name="btnLogin" id="btnLogin">Ingresar</button>
+                                    <p>
+                                        <a href="#" name="linkRecordarClave" id="linkRecordarClave">Recordar Clave</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- FIN ARTICULO DE LOGIN -->
+                <!-- ARTUCULO DE INFORMACION DEL COLEGIO  -->
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Facer eligendi id duo</h2>
+                    </div>
+                    <div class="article_content">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1988.4319381877942!2d-74.14129386099712!3d4.618362700021897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1416181914925" style="max-width: 100%"></iframe>
+                        <h4>Dirección</h4>
+                        <p>Calle 56 sur No. 45-66</p>
+                        <h4>Teléfono</h4>
+                        <p>(571) 5588996</p>
+                    </div>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

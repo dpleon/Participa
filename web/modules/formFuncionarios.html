@@ -1,0 +1,174 @@
+				<!-- ARTICULO PARA ADMINISTRAR FUNCIONARIOS -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldDocumentoFuncionario");
+					// validacion del formulario
+				    $('button#btnsbmtRegistrarFuncionario').click(function(event){
+				        if( prdgm_validarNumeroDIV('txtfldDocumentoFuncionario','Número de identificación') == false) return false;
+				        if( 
+				        	prdgm_validarRadioBottomDIV('checkCoordinadorAcademico','Tipo funcionario') == false
+				        	&& prdgm_validarRadioBottomDIV('checkCoordinadorDisciplinario','Tipo funcionario') == false
+				        	&& prdgm_validarRadioBottomDIV('checkDocente','Tipo funcionario') == false
+				        ) return false;
+		                if( prdgm_validarTextoDIV('txtfldPrimerNombreFuncionario','Primer Nombre') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldPrimerApellidoFuncionario','Primer Apellido') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldDireccionFuncionario','Dirección') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldTelefonoFuncionario','Teléfono') == false) return false;
+		                if( prdgm_validarTextoDIV('dateNacimientoFuncionario','Fecha Nacimiento') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldTituloFuncionario','Título profesional') == false) return false;
+		                if( prdgm_validarTextAreaDIV('txtareaExperienciaFuncionario','Experiencia laboral') == false) return false;
+		                if( prdgm_validarTextoDIV('slctEstadoCivilFuncionario','Estado civil') == false) return false;
+		                if( prdgm_validarEsNumeroDIV('txtfldNumHijos','# Hijos') == false) return false;
+		                if( prdgm_validarEmailDIV('emailEmailFuncionario','E-mail') == false) return false;
+						// se envia datos del formulario				        
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Administrar Funcionarios</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarFuncionarios" name="formAdministrarFuncionarios">
+								<div class="form_content" >
+									<p>En el siguiente formulario se administra la información de los funcionarios del colegio, puede crear, consultar o dar de baja un docente.</p>
+									 <div class="form_field form_field_3" >
+										<label for="txtfldDocumentoFuncionario"><h3>Número de identificación:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoFuncionario" id="txtfldDocumentoFuncionario" placeholder="Ej: 1234567997">
+									</div>
+									 <div class="form_field form_field_1" >
+										<label><h3><b>Tipo funcionario:</b><sup class="required"> * </sup></h3></label>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Coordinador Académico:</h3></label>
+										<input type="checkbox" name="checkCoordinadorAcademico" id="checkCoordinadorAcademico" value=""> 
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Coordinador Disciplinario:</h3></label>
+										<input type="checkbox" name="checkCoordinadorDisciplinario" id="checkCoordinadorDisciplinario" value="">
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Docente:</h3></label>
+										<input type="checkbox" name="checkDocente" id="checkDocente" value="">
+									</div>
+	                                <div class="clear">
+									<div class="form_field form_field_4" >
+										<label for="txtfldPrimerNombreFuncionario"><h3>Primer Nombre:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerNombreFuncionario" id="txtfldPrimerNombreFuncionario" placeholder="Ej: Maria">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoNombreFuncionario"><h3>Segundo Nombre:</h3></label>
+										<input type="text" name="txtfldSegundoNombreFuncionario" id="txtfldSegundoNombreFuncionario" placeholder="Ej: José">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldPrimerApellidoFuncionario"><h3>Primer Apellido:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerApellidoFuncionario" id="txtfldPrimerApellidoFuncionario" placeholder="Ej: Mora">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoApellidoFuncionario"><h3>Segundo Apellido:</h3></label>
+										<input type="text" name="txtfldSegundoApellidoFuncionario" id="txtfldSegundoApellidoFuncionario" placeholder="Ej: Sanabria">
+									</div>
+									<div class="clear"></div>
+									 <div class="form_field form_field_2" >
+										<label for="txtfldDireccionFuncionario"><h3>Dirección:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDireccionFuncionario" id="txtfldDireccionFuncionario" placeholder="Ej: Calle 56 No. 87-15">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldTelefonoFuncionario"><h3>Teléfono:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTelefonoFuncionario" id="txtfldTelefonoFuncionario" placeholder="Ej: (571) 123456789">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="dateNacimientoFuncionario"><h3>Fecha Nacimiento:<sup class="required"> * </sup></h3></label>
+										<input type="date" name="dateNacimientoFuncionario" id="dateNacimientoFuncionario" placeholder="Ej: 2007-03-01">
+									</div>
+									<div class="clear"></div>
+                                    <div class="form_field form_field_4">
+										<label for="txtfldTituloFuncionario"><h3>Título profesional:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTituloFuncionario" id="txtfldTituloFuncionario" placeholder="Ej: Ingeniero de Sistemas">
+									</div>
+									<div class="form_field form_field_3">
+										<label for="txtareaExperienciaFuncionario"><h3>Experiencia laboral:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaExperienciaFuncionario" name="txtareaExperienciaFuncionario" placeholder="Poner Experiencia del Funcionario"></textarea>
+									</div>
+									<div class="form_field form_field_4">
+										<label for="slctEstadoCivilFuncionario"><h3>Estado civil:<sup class="required"> * </sup></h3></label>
+										<input list="listaEstadoCivil" name="slctEstadoCivilFuncionario" id="slctEstadoCivilFuncionario" placeholder="Ej: Casado">
+										<datalist id="listaEstadoCivil">
+											<option value="Soltero">
+											<option value="Casado">
+											<option value="Union libre">
+											<option value="Viudo">
+										</datalist>
+									</div>
+									<div class="form_field form_field_6">
+										<label for="txtfldNumHijos"><h3># Hijos:</h3></label>
+										<input type="text" name="txtfldNumHijos" id="txtfldNumHijos" placeholder="Ej: 2" >
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3">
+										<label for="emailEmailFuncionario"><h3>E-mail:<sup class="required"> * </sup></h3></label>
+										<input type="email" name="emailEmailFuncionario" id="emailEmailFuncionario" placeholder="Ej: mail@mail.com">
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" id="btnsbmtRegistrarFuncionario" name="">Registrar</button>
+										<button type="submit" id="btnsbmtActualizarFuncionario" name="">Actualizar</button>
+										<button type="submit" id="btnsbmtConsultarFuncionario" name="">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="clear"></div>
+						<!-- LISTA DE COLEGIOS  -->
+						<h2>Listado de Funcionarios</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Identificación
+										</th>
+										<th>
+											Funcionario
+										</th>
+										<th>
+											perfil
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>									
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											80157258 
+										</td>
+										<td>
+											Luis Miguel Mora
+										</td>
+										<td>
+											Docente
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

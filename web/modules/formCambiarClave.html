@@ -1,0 +1,48 @@
+				<!-- ARTUCULO DEL FORMULARIO DE CAMBIO DE CLAVE  -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldClave");
+					// validacion del formulario
+				    $('button#btnSbmtActualizaClave').click(function(event){
+				        if( prdgm_validarTextoDIV('txtfldClave','Clave') == false) return false;
+				        if( prdgm_validarTextoDIV('pswdNuevaClave','Nueva Clave') == false) return false;
+				        if( prdgm_validarTextoDIV('pswdConfirmaNuevaClave','Confirmar Nueva Clave') == false) return false;
+				        if( prdgm_validarCamposIgualesDIV("pswdNuevaClave","Nueva Clave","pswdConfirmaNuevaClave","Confirmar Nueva Clave") == false) return false;
+				    });
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Cambiar Clave</h2>
+					</div>
+					<div class="article_content">
+						<form action="" method="get" name="fromActualizaClave" id="fromActualizaClave">
+							<div class="form">
+								<div class="form_title">
+									<p>Aqui puede cambiar su clave de acceso al sistema Participa, para cambiar la clave debe digitar los datos de la contraseña antigua, la nueva y confirmación de la nueva contraseña, luego hacer click en el botón <b>Actualizar</b>.</p>
+								</div>
+								<div class="form_content">
+									<div class="form_field form_field_3">
+										<label for="txtfldClave"><h3>Clave:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldClave" id="txtfldClave" placeholder="">
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3">
+										<label for="pswdNuevaClave"><h3>Nueva Clave:<sup class="required"> * </sup></h3></label>
+										<input type="password" name="pswdNuevaClave" id="pswdNuevaClave" placeholder="">
+									</div>
+									<div class="form_field form_field_3">
+										<label for="pswdConfirmaNuevaClave"><h3>Confirmar Nueva Clave:<sup class="required"> * </sup></h3></label>
+										<input type="password" name="pswdConfirmaNuevaClave" id="pswdConfirmaNuevaClave" placeholder="">
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtActualizaClave" id="btnSbmtActualizaClave">Actualizar</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>

@@ -1,0 +1,262 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE ASIGNATURAS DECRETADAS POR EL MINISTERIO DE EDUCACION -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldNombreAsignatura");
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarAsignatura').click(function(event){
+				        if( prdgm_validarSelectDIV('slctAsignaturaColegio','Materia') == false) return false;
+				        if( 
+				        	prdgm_validarRadioBottomDIV('checkGrado1','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado2','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado3','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado4','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado5','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado6','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado7','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado8','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado9','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado10','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado11','Grado') == false
+				        	&& prdgm_validarRadioBottomDIV('checkGrado12','Grado') == false
+				        ) return false;
+				        if( prdgm_validarSelectDIV('slctPeriodo','Periodo') == false) return false;
+
+				        if( prdgm_validarTextoDIV('txtTemaAEvaluar','Tema') == false) return false;
+				        if( prdgm_validarTextAreaDIV('txtareaDetalleTema','Detalle Tema') == false) return false;
+						// se envia datos del formulario				        
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Planeación Académica</h2>
+					</div>
+					<div class="article_content">
+						<form action="" method="get">
+							<div class="form">
+								<div class="form_title">
+									<h2></h2>
+								</div>
+								<div class="form_content">
+									<p>En éste módulo se registra las materias que van a ser dicatadas por el colegio como parte de la planeación académica por grados.</p>
+									<div class="form_field form_field_4">
+										<label for="slctAsignaturaColegio"><h3>Materia:<sup class="required"> * </sup></h3></label>
+										<select name="slctAsignaturaColegio" id="slctAsignaturaColegio" requierd>
+											<option value="">Seleccione</option>
+											<option value="Ciencias Sociales">Ciencias Sociales</option>
+											<option value="Ciencias Naturales">Ciencias Naturales</option>
+											<option value="Educacion Artística">Educación Artística</option>
+											<option value="Educacion ética">Educación ética</option>
+											<option value="Educación física">Educación física</option>
+											<option value="Idiomas Extranjeros">Idiomas Extranjeros</option>
+											<option value="Lengua castellana">Lengua castellana</option>
+											<option value="Matemáticas">Matemáticas</option>
+										</select>
+									</div>
+<!-- 									<div class="form_field form_field_4">
+										<label for="slctGrado"><h3>Grado:<sup class="required"> * </sup></h3></label>
+										<select id="slct" name="slctGrado" id="slctGrado" requierd>
+											<option value="">Seleccione</option>
+											<option value="1">1 - Primero</option>
+											<option value="2">2 - Segundo</option>
+											<option value="3">3 - Tercero</option>
+											<option value="4">4 - Cuarto</option>
+											<option value="5">5 - Quinto</option>
+											<option value="6">6 - Sexto</option>
+											<option value="7">7 - Séptimo</option>
+											<option value="8">8 - Octavo</option>
+											<option value="9">9 - Noveno</option>
+											<option value="10">10 - Décimo</option>
+											<option value="11">11 - Once</option>
+											<option value="12">12 - Doce</option>
+										</select>
+									</div>
+ -->									<div class="form_field form_field_1">
+										<label for="txtareaComponente"><h3>Componente - Pregunta Problematizadora:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaComponente" name="txtareaComponente" placeholder="" ></textarea>
+									</div>
+									<div class="clear"></div>
+									 <div class="form_field form_field_1" >
+										<label><h3><b>Grado:</b><sup class="required"> * </sup></h3></label>
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado1"><h3>Primero:</h3></label>
+										<input type="checkbox" name="checkGrado1" id="checkGrado1" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado2"><h3>Segundo:</h3></label>
+										<input type="checkbox" name="checkGrado2" id="checkGrado2" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado3"><h3>Tercero:</h3></label>
+										<input type="checkbox" name="checkGrado3" id="checkGrado3" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado4"><h3>Cuarto:</h3></label>
+										<input type="checkbox" name="checkGrado4" id="checkGrado4" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado5"><h3>Quinto:</h3></label>
+										<input type="checkbox" name="checkGrado5" id="checkGrado5" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado6"><h3>Sexto:</h3></label>
+										<input type="checkbox" name="checkGrado6" id="checkGrado6" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado7"><h3>Séptimo:</h3></label>
+										<input type="checkbox" name="checkGrado7" id="checkGrado7" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado8"><h3>Octavo:</h3></label>
+										<input type="checkbox" name="checkGrado8" id="checkGrado8" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado9"><h3>Noveno:</h3></label>
+										<input type="checkbox" name="checkGrado9" id="checkGrado9" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado10"><h3>Décimo:</h3></label>
+										<input type="checkbox" name="checkGrado10" id="checkGrado10" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado11"><h3>Once:</h3></label>
+										<input type="checkbox" name="checkGrado11" id="checkGrado11" value=""> 
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="checkGrado12"><h3>Doce:</h3></label>
+										<input type="checkbox" name="checkGrado12" id="checkGrado12" value=""> 
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_4">
+										<label for="slctPeriodo"><h3>Periodo:<sup class="required"> * </sup></h3></label>
+										<select id="slctPeriodo" name="slctPeriodo" requierd>
+											<option value="">Seleccione</option>
+											<option value="1">Periodo 1</option>
+											<option value="2">Periodo 2</option>
+											<option value="3">Periodo 3</option>
+											<option value="4">Periodo 4</option>
+										</select>
+									</div>
+									<div class="form_field form_field_15" >
+										<label for="txtTemaAEvaluar"><h3>Tema:<sup class="required"> * </sup></h3></label>
+										<input type ="text" name="txtTemaAEvaluar" id="txtTemaAEvaluar" placeholder="Ej: " required>
+									</div>
+									<div class="form_field form_field_1">
+										<label for="txtareaDetalleTema"><h3>Detalle Tema:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaDetalleTema" name="txtareaDetalleTema" placeholder="" ></textarea>
+									</div>
+									<h3>
+										<button type="button" id="btnAgregarTema" name="btnAgregarTema"><span class="glyphicon glyphicon-plus"></span></button>
+										Agregar Tema 										
+									</h3>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarAsignatura" id="btnSbmtRegistrarAsignatura">Registrar</button>
+										<button type="submit" name="btnSbmtActualizarAsignatura" id="btnSbmtActualizarAsignatura">Actualizar</button>
+										<button type="submit" name="btnSbmtConsultarAsignatura" id="btnSbmtConsultarAsignatura">Consultar</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- LISTA DE ASIGNATURAS -->
+						<h2>Listado de Asignaturas</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Asignatura MEN
+										</th>
+										<th>
+											Asignatura
+										</th>
+										<th>
+											Grado
+										</th>
+										<th>
+											Tema
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											Ciencias Naturales
+										</td>
+										<td>
+											Ciencias Naturales
+										</td>
+										<td>
+											Noveno (9)
+										</td>
+										<td>
+											El cuerpo humano
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									<tr class="fila_listas">
+										<td>
+											Español
+										</td>
+										<td>
+											Lengua Castellana
+										</td>
+										<td>
+											Sexto (6)
+										</td>
+										<td>
+											Conjugación de verbos
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											Matemáticas
+										</td>
+										<td>
+											Álgebra
+										</td>
+										<td>
+											Octavo (8)
+										</td>
+										<td>
+											Factorización
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+
+

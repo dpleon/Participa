@@ -1,0 +1,58 @@
+				<!-- ARTICULO PARA EL MENU DE USUARIOS -->
+				<div class="article">
+					<!-- SCRIPT DE PROGRAMACION DEL MENU  -->
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('.prueba').click(function(){$('#col_central').load('../js/prdgm_lib_JQuery.js');});
+							
+							$('li#mnuCambiarClave').click(function(){$('#col_central').load('modules/formCambiarClave.html');});
+							$('li#mnuCambiarCorreo').click(function(event){$('#col_central').load('modules/formCambiarCorreo.html');});
+
+							$('li#mnuColegios').click(function(event){$('#col_central').load('modules/formColegios.html');});
+							$('li#mnuSalones').click(function(event){$('#col_central').load('modules/formSalones.html');});
+							$('li#mnuCursos').click(function(event){$('#col_central').load('modules/formCursos.html');});
+							$('li#mnuPermisosPerfil').click(function(event){$('#col_central').load('modules/formPermisosPerfil.html');});
+							$('li#mnuFuncionarios').click(function(event){$('#col_central').load('modules/formFuncionarios.html');});
+							$('li#mnuEstudiantes').click(function(event){$('#col_central').load('modules/formEstudiantes.html');});
+
+							$('li#mnuAsignaturasCOL').click(function(event){$('#col_central').load('modules/formAsignaturasColegio.html');});
+							$('li#mnuPlaneacionAcademica').click(function(event){$('#col_central').load('modules/formPlaneacionAcademica.html');});
+							$('li#mnuAsignaturaDocentes').click(function(event){$('#col_central').load('modules/formAsignaturasDocentes.html');});
+							$('li#mnuAgenda').click(function(event){$('#col_central').load('modules/formAgenda.html');});
+							$('li#mnuCalificaciones').click(function(event){$('#col_central').load('modules/formCalificaciones.html');});
+							$('li#mnuObservaciones').click(function(event){$('#col_central').load('modules/formObservaciones.html');});
+							$('li#mnuCitaciones').click(function(event){$('#col_central').load('modules/formCitaciones.html');});
+						});
+					</script>
+					<div class="article_title">
+						<h2>menu</h2>
+					</div>
+					<div class="article_menu">
+						<ul class="menu">
+							<li class="nivel1" id="">User</li>
+							<li class="nivel2" id="mnuCambiarClave">Change Password</li>
+							<li class="nivel2" id="mnuCambiarCorreo">Change Mail</li>
+
+							<li class="nivel1" id="">Administration</li>
+							<li class="nivel2" id="mnuColegios">Schools</li>
+							<li class="nivel2" id="mnuSalones">Classrooms</li>
+							<li class="nivel2" id="mnuCursos">Grades</li>
+							<li class="nivel2" id="mnuPermisosPerfil">Manage Permissions</li>
+							<li class="nivel2" id="mnuFuncionarios">Functionaries</li>
+							<li class="nivel2" id="mnuEstudiantes">Students</li>
+
+							<li class="nivel1" id="">Academic Administration</li>
+							<li class="nivel2" id="mnuAsignaturasCOL">Subjects - School</li>
+							<li class="nivel2" id="mnuPlaneacionAcademica">Academic Planning</li>
+							<li class="nivel2" id="mnuAsignaturaDocentes">Subjects - Teachers</li>
+							<li class="nivel2" id="mnuCalificaciones">Qualifications</li>
+							<!-- <li class="nivel2" id="">Horario de Clases</li> -->
+							<li class="nivel2" id="mnuAgenda">Academic Schedule</li>
+
+							<li class="nivel1" id="">Discipline</li>
+							<li class="nivel2" id="mnuObservaciones">Observations</li>
+							<li class="nivel2" id="mnuCitaciones">Citations</li>
+							<!-- <li class="nivel2" id="">Sanctions</li> -->
+						</ul>
+					</div>
+				</div>

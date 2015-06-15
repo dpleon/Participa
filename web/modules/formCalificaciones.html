@@ -1,0 +1,152 @@
+				<!-- ARTICULO PARA ADMINISTRAR LAS CALIFICACIONES -->
+				<script>
+				$(document).ready(function(){
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Calificiones</h2>
+					</div>
+					<div class="article_content">
+						<div class="form">
+							<form action="" method="get">
+								<div class="form_content" >
+									<p>En este formulario se pude ingresar las calificaciones de las actividades desarrolladas por los estudiantes.</p>
+									<div class="form_field form_field_4" >
+										<label for="slctAsignaturaColegio"><h3>Asignatura<sup class="required"> * </sup></h3></label>
+										<select id="slct" name="slctAsignaturaColegio" requierd>
+											<option value="" disabled="disabled" selected="selected">Seleccione</option>
+											<option value="Ciencias Sociales">Ciencias sociales</option>
+											<option value="Ciencias Naturales">Ciencias naturales</option>
+											<option value="Educacion Artística">Educacion artística</option>
+											<option value="Educacion ética">Educacion ética</option>
+											<option value="Educación física">Educación física</option>
+											<option value="Idiomas Extranjeros">Idiomas extranjeros</option>
+											<option value="Lengua castellana">Lengua castellana</option>
+											<option value="Matemáticas">Matemáticas</option>
+										</select>
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtCodigoCurso"><h3>Curso<sup class="required"> * </sup></h3></label>
+										<select id="slctodigoCurso" name="slctCodigoCursoo" requierd>
+											<option value="" disabled="disabled" selected="selected">Seleccione</option>
+											<option value="101a">101</option>
+											<option value="201a">201</option>
+											<option value="301a">301</option>
+											<option value="401a">401</option>
+											<option value="501a">501</option>
+											<option value="601a">601</option>
+											</select>
+									</div>	
+									<div class="form_field form_field_2" >
+										<label for="txtNombreTarea"><h3>Tarea asignada<sup class="required"> * </sup></h3></label>
+										<select id="txtNombreTarea" name="txtNombreTarea" requierd>
+											<option value="" disabled="disabled" selected="selected">Seleccione</option>
+											<option value="vienetablatareas">vienetablatareas</option>
+											<option value="vienetablatareas">vienetablatareas</option>
+										</select>
+									</div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" id="btnsbmtConsultarCalificaciones" name="">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="clear"></div>
+						<h2>LISTA DE ESTUDIANTES POR CURSO</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Curso
+										</th>
+										<th>
+											Nombre Estudiante
+										</th>
+										<th>
+											Asignatura
+										</th>
+										<th>
+											Tarea
+										</th>
+										<th style="width: 15px;">
+											Nota
+										</th>
+										<th style="width: 15px;">
+											Actualizar
+										</th>									
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											1103
+										</td>
+										<td>
+											Castañeda Hurtado Diego Andrés
+										</td>
+										<td>
+											Mateáticas
+										</td>
+										<td>
+											Ejercicios Cálculo
+										</td>
+										<td class="cell_center">
+											<input type="text" name="txtfldNota" id="txtfldNota" placeholder="Ej: 3,5">
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-refresh refresh" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											1003
+										</td>
+										<td>
+											León Cepeda Diana Patricia
+										</td>
+										<td>
+											Español
+										</td>
+										<td>
+											Resumen História
+										</td>
+										<td class="cell_center">
+											4,7
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-refresh refresh" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											904
+										</td>
+										<td>
+											Mora Cadena Luis Miguel
+										</td>
+										<td>
+											Ciencias Sociales
+										</td>
+										<td>
+											Trabajo de Filosofía
+										</td>
+										<td class="cell_center">
+											<input type="text" name="txtfldNota" id="txtfldNota" placeholder="Ej: 3,5">
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-refresh refresh" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>

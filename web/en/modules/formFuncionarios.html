@@ -1,0 +1,162 @@
+				<!-- ARTICULO PARA ADMINISTRAR FUNCIONARIOS -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldDocumentoFuncionario");
+					// validacion del formulario
+				    $('button#btnsbmtRegistrarFuncionario').click(function(event){
+				        if( prdgm_validarNumeroDIV('txtfldDocumentoFuncionario','Número de identificación') == false) return false;
+				        // pendiente la validacion de los check boxes
+		                if( prdgm_validarTextoDIV('txtfldPrimerNombreFuncionario','Primer Nombre') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldPrimerApellidoFuncionario','Primer Apellido') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldDireccionFuncionario','Dirección') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldTelefonoFuncionario','Teléfono') == false) return false;
+		                if( prdgm_validarTextoDIV('dateNacimientoFuncionario','Fecha Nacimiento') == false) return false;
+		                if( prdgm_validarTextoDIV('txtfldTituloFuncionario','Título profesional') == false) return false;
+		                if( prdgm_validarTextAreaDIV('txtareaExperienciaFuncionario','Experiencia laboral') == false) return false;
+		                if( prdgm_validarTextoDIV('slctEstadoCivilFuncionario','Estado civil') == false) return false;
+		                if( prdgm_validarEsNumeroDIV('txtfldNumHijos','# Hijos') == false) return false;
+		                if( prdgm_validarEmailDIV('emailEmailFuncionario','E-mail') == false) return false;
+						// se envia datos del formulario				        
+				    });
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Manage Funcionaries</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarFuncionarios" name="formAdministrarFuncionarios">
+								<div class="form_content" >
+									<p>In this form the information given school officials can create, access or terminate a teacher.</p>
+									 <div class="form_field form_field_3" >
+										<label for="txtfldDocumentoFuncionario"><h3>Identification number:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDocumentoFuncionario" id="txtfldDocumentoFuncionario" placeholder="Example: 1234567997">
+									</div>
+									 <div class="form_field form_field_1" >
+										<label><h3><b>Type funcionary:</b><sup class="required"> * </sup></h3></label>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Academic Coordinator:</h3></label>
+										<input type="checkbox" name="chckPerfilFuncionario" id="chckPerfilFuncionario" value=""> 
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Discipline Coordinator:</h3></label>
+										<input type="checkbox" name="chckPerfilFuncionario" id="chckPerfilFuncionario" value="">
+									</div>
+									<div class="form_field form_field_2" >
+										<label for=""><h3>Teacher:</h3></label>
+										<input type="checkbox" name="chckPerfilFuncionario" id="chckPerfilFuncionario" value="">
+									</div>
+	                                <div class="clear">
+									<div class="form_field form_field_4" >
+										<label for="txtfldPrimerNombreFuncionario"><h3>First Name:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerNombreFuncionario" id="txtfldPrimerNombreFuncionario" placeholder="Example: Maria">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoNombreFuncionario"><h3>Second Name:</h3></label>
+										<input type="text" name="txtfldSegundoNombreFuncionario" id="txtfldSegundoNombreFuncionario" placeholder="Example: José">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldPrimerApellidoFuncionario"><h3>First Last Name:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldPrimerApellidoFuncionario" id="txtfldPrimerApellidoFuncionario" placeholder="Example: Mora">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldSegundoApellidoFuncionario"><h3>Second Last Name:</h3></label>
+										<input type="text" name="txtfldSegundoApellidoFuncionario" id="txtfldSegundoApellidoFuncionario" placeholder="Example: Sanabria">
+									</div>
+									<div class="clear"></div>
+									 <div class="form_field form_field_2" >
+										<label for="txtfldDireccionFuncionario"><h3>Address:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDireccionFuncionario" id="txtfldDireccionFuncionario" placeholder="Example: Street 56 No. 87-15">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="txtfldTelefonoFuncionario"><h3>Telephone:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTelefonoFuncionario" id="txtfldTelefonoFuncionario" placeholder="Example: (571) 123456789">
+									</div>
+									 <div class="form_field form_field_4" >
+										<label for="dateNacimientoFuncionario"><h3>Date of Birth:<sup class="required"> * </sup></h3></label>
+										<input type="date" name="dateNacimientoFuncionario" id="dateNacimientoFuncionario" placeholder="Example: 2007-03-01">
+									</div>
+									<div class="clear"></div>
+                                    <div class="form_field form_field_4">
+										<label for="txtfldTituloFuncionario"><h3>Job Title:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTituloFuncionario" id="txtfldTituloFuncionario" placeholder="Example: Systems Engineer">
+									</div>
+									<div class="form_field form_field_3">
+										<label for="txtareaExperienciaFuncionario"><h3>Work Experience:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaExperienciaFuncionario" name="txtareaExperienciaFuncionario" placeholder="Put Experience Funcionary"></textarea>
+									</div>
+									<div class="form_field form_field_4">
+										<label for="slctEstadoCivilFuncionario"><h3>Marital Status:<sup class="required"> * </sup></h3></label>
+										<input list="listaEstadoCivil" name="slctEstadoCivilFuncionario" id="slctEstadoCivilFuncionario" placeholder="Example: Married">
+										<datalist id="listaEstadoCivil">
+											<option value="Single">
+											<option value="Married">
+											<option value="Free Union">
+											<option value="Widower">
+										</datalist>
+									</div>
+									<div class="form_field form_field_6">
+										<label for="txtfldNumHijos"><h3># Offspring:</h3></label>
+										<input type="text" name="txtfldNumHijos" id="txtfldNumHijos" placeholder="Example: 2" >
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3">
+										<label for="emailEmailFuncionario"><h3>E-mail:<sup class="required"> * </sup></h3></label>
+										<input type="email" name="emailEmailFuncionario" id="emailEmailFuncionario" placeholder="Example: mail@mail.com">
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" id="btnsbmtRegistrarFuncionario" name="">Register</button>
+										<button type="submit" id="btnsbmtActualizarFuncionario" name="">Update</button>
+										<button type="submit" id="btnsbmtConsultarFuncionario" name="">Consult</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="clear"></div>
+						<!-- LISTA DE COLEGIOS  -->
+						<h2>List of Funcionaries</h2>
+						<div class="table_content">
+							<table class="listas">
+								<tr>
+									<th>
+										Identification
+									</th>
+									<th>
+										Funcionary
+									</th>
+									<th>
+										Profile
+									</th>
+									<th style="width: 15px;">
+										Load
+									</th>									
+									<th style="width: 15px;">
+										Estate
+									</th>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										80157258 
+									</td>
+									<td>
+										Luis Miguel Mora
+									</td>
+									<td>
+										Teacher
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>

@@ -1,0 +1,127 @@
+				<!-- LISTADO DE TAREAS  -->
+				<script>
+				$(document).ready(function(){
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Citaciones</h2>
+					</div>
+					<div class="article_content" >
+						<!-- LISTA DE ASIGNATURAS -->
+						<p>En este listado se encontrará el listado de las citaciones realizadas al estudiante y/o al acudiente, este muestra la fecha y hora de la citación. Las actividades no vistas por el estudiante se verán en color azul.</p>
+						<div class="clear"></div>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Fecha
+										</th>
+										<th>
+											Hora
+										</th>
+										<th>
+											Tipo
+										</th>
+										<th style="width: 50%;">
+											Motivo
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="no_visto">
+										<td>
+											2015-03-15
+										</td>
+										<td>
+											08:30:00
+										</td>
+										<td>
+											Académico
+										</td>
+										<td>
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											2015-04-30
+										</td>
+										<td>
+											09:30:00
+										</td>
+										<td>
+											Académico
+										</td>
+										<td>
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="no_visto">
+										<td>
+											2015-03-14
+										</td>
+										<td>
+											10:30:00
+										</td>
+										<td>
+											Académico
+										</td>
+										<td>
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											2015-03-20
+										</td>
+										<td>
+											09:30:00
+										</td>
+										<td>
+											Académico
+										</td>
+										<td>
+											El estudiante presenta problemas de disciplina por cuanto tiene conflictos con sus compañeros.
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

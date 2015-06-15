@@ -1,0 +1,1204 @@
+*{
+ margin: 0 0 0 0;
+ padding: 0 0 0 0;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+
+::-webkit-scrollbar,
+::-moz-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+/*@font-face {
+    font-family: "AugustSans-45Light";
+    src: url(../fonts/august_sans/AugustSans-45Light.ttf) format("truetype");
+}
+*/
+body {
+  background-color: rgba(203, 203, 242, 0.1);
+  color: rgba(33, 33, 33,0.8);
+  /*font-family:  "AugustSans-45Light","Century Gothic", sans-serif;*/
+  font-family:  "Century Gothic", "Times Roman", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 0 auto;
+  width: auto;
+}
+
+header, nav, footer {
+  width: 100%;
+}
+
+/************************** ESTILOS DE LA CABECERA *******************************/
+header {
+  background-color: rgb(3, 15, 114);
+  height: 80px;
+  margin: 0 auto;
+  position:fixed;
+  top: 0;
+}
+
+header .col_izquierda, header .col_derecha {
+  display: inline-block;
+  float: left;
+  min-height: 80px;
+  max-height: 80px;
+  display: table;
+}
+
+header .col_izquierda {
+  width: 70%;
+}
+
+header .col_izquierda .image, header .col_izquierda .content{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header .col_izquierda .image{
+  text-align: right;
+  width: 15%;
+}
+
+header .col_izquierda .image img {
+  max-height: 77px;
+  min-height: 77px;
+}
+
+header .col_izquierda .content{
+  width: 85%;
+}
+
+header .col_izquierda .content h1{
+  color: rgb(255,255,255);
+  font-size: 1.6em;
+  font-weight: normal;
+  margin: 2px 0;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+header .col_izquierda .content h2{
+  color: rgb(242, 240, 106);
+  font-size: 0.9em;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+header .col_derecha {
+  position: relative;
+  max-width: 30%;
+  min-width: 30%;
+  padding: 7px 0; 
+  vertical-align: bottom;
+}
+
+/************************** FIN ESTILOS DE LA CABECERA *******************************/
+
+/******************* ESTILO PARA EL FORMULARIO DE LOGIN *********************/
+.form_login {
+  float: right;
+  font-weight: normal;
+  margin-right: 20px;
+  max-height:78px;
+  max-width: 75%;
+  min-height:78px;
+  min-width: 75%;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.form_login .form_title {
+  padding: 1px 0; 
+  text-align: center;
+}
+
+.form_login .form_title h2 {
+  font-size: 0.8em;
+  color: rgb(255,255,255);
+  text-transform: uppercase;
+}
+
+.form_login .form_content h3 {
+  color: rgb(242, 240, 106);
+  font-size: 0.7em;
+}
+
+.form_login .form_content a {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.form_login .form_content a:hover {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(242, 240, 106, 1);
+}
+
+.form_login .form_content {
+  font-family: "Arial","Helvetica",sans-serif;
+  width: 100%;
+}
+
+.form_login .form_field {
+  display: inline-block;
+  float: left;
+  min-width: 50%;
+  max-width: 50%;
+  margin: 2px auto;
+  padding: 3px;
+  vertical-align: top;
+}
+
+.form_login .form_field input, .form_login .form_field select, .form_login .form_field textarea, 
+.form_login .form_button_box button, .form_login .form_button_box input {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px rgb(242, 240, 106) solid;
+  border-radius: 3px;
+  color: rgba(60,60,60,0.7);
+  font-size: 0.7em;
+  height: 20px;
+  padding: 2px;
+  width: 100%;
+}
+
+.form_login .form_field input:focus, .form_login .form_field select:focus, .form_login .form_field textarea:focus, 
+.form_login .form_button_box input:focus, .form_login .form_button_box button:focus {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+
+  color: rgba(250, 250, 250, 1);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.form_login .form_field input[type=radio], .form_login .form_field input[type=checkbox]{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  color: #F7F7F7;
+  margin-right: 8px;
+  width: auto;
+}
+
+.form_login .form_button_box{
+  display: block;
+  padding: 3px;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.form_login .form_button_box a{
+  float: right;
+  padding: 4px 0;
+}
+
+.form_login .form_button_box button,
+.form_login .form_button_box input[type=submit], .form_login .form_button_box input[type=button]{
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.8)), to(rgba(242, 240, 106, 1)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.8), rgba(242, 240, 106, 1));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.8), rgba(242, 240, 106, 1));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.8), rgba(242, 240, 106, 1));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.8), rgba(242, 240, 106, 1));
+  box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  color: rgb(3, 15, 114);
+  display: inline;
+  text-shadow: 1px 1px 1px rgb(255,255,255);
+  width: 140px;
+}
+
+.form_login .form_button_box button:hover,
+.form_login .form_button_box input[type=submit]:hover, .form_login .form_button_box input[type=button]:hover,
+.form_login .form_button_box button:focus,
+.form_login .form_button_box input[type=submit]:focus, .form_login .form_button_box input[type=button]:focus {
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  color: rgba(250, 250, 250, 1);
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(60,60,60,0.8);
+}
+
+/******************* FIN ESTILO PARA EL FORMULARIO DE LOGIN *********************/
+
+
+/************************** ESTILOS DE LA BARRA DE NAVEGACION *******************************/
+
+nav{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  display: inline-flex;
+  position:fixed;
+  margin-top: 80px;
+  max-height: 40px;
+}
+
+nav div {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+nav .nivel1, nav .nivel1 li {
+	-o-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+  display: inline-block;
+  float: left;
+  font-size: 1em;
+  padding: 2px 7px;
+  vertical-align: top;
+}
+
+nav .nivel1:hover, nav .nivel1 li:hover {
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+}
+
+nav ul a {
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgb(3, 15, 114);
+  text-decoration: none;
+}
+
+nav ul a:hover {
+	-o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: rgb(3, 15, 114);
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+nav ul a span{
+  margin-right: 3px;
+}
+
+/********* Estilos barra desplegable *********/
+
+/** menu **/
+#nav li a, #nav li {
+  float: left;
+}
+
+#nav li {
+  list-style: none;
+  position: relative;
+}
+
+/** submenu **/
+#nav li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+}
+
+#nav li:hover ul {
+  display: block;
+  color: rgb(3, 15, 114);
+}
+
+#nav li ul li, #nav li ul li a {
+  float: none;
+}
+
+#nav li ul li {
+  _display: inline; /* para ie6 */
+}
+
+#nav li ul li a {
+  width: 110px;
+  display: block;
+}
+
+#nav li ul li:hover {
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+}
+
+/********* Fin estilos barra desplegable *********/
+
+/************************** FIN ESTILOS DE LA BARRA DE NAVEGACION *******************************/
+
+/************************** ESTILOS DEL CONTENIDO DE LA PAGINA *******************************/
+
+section{
+  min-height: 90vh;
+  max-height: 90vh;
+  margin: 0 auto;
+  padding: 135px 0px 80px 0px;
+  width: auto;
+}
+
+/************************** FIN ESTILOS DEL CONTENIDO DE LA PAGINA *******************************/
+
+#col_izquierda, #col_central, #col_derecha {
+  min-height: 81vh;
+  max-height: 81vh;
+  display: inline-block;
+  float: left;
+  overflow: auto;
+}
+
+/***************************************** CONTENIDO DE LA PARTE IZQUIERDA  *******************************************/
+
+#col_izquierda{
+  padding: 0px 10px 0px 5px;
+  width: 23%;
+}
+
+#col_izquierda .article .article_title h2{
+  font-size: 1.1em;
+}
+
+#col_izquierda .article .article_content{
+  padding: 10px;
+}
+
+#col_izquierda .article .article_content h2{
+  font-size: 1.1em;
+}
+
+#col_izquierda .article .article_content h3{
+  font-size: 1em;
+}
+
+#col_izquierda .article .article_content h4{
+  font-size: 0.9em;
+}
+
+#col_izquierda .article .article_content p{
+  font-size: 0.9em;
+}
+
+#col_izquierda .article .article_content a{
+  color: rgb(52, 152, 219);
+  font-weight: lighter;
+}
+
+/***************************************** FIN CONTENIDO DE LA PARTE IZQUIERDA  *******************************************/
+
+/***************************************** CONTENIDO DE LA PARTE CENTRAL  *******************************************/
+
+#col_central{
+  padding: 0px 10px;
+  width: 60%;
+}
+
+#col_central .article .article_title h2{
+  font-size: 1.3em;
+}
+
+#col_central .article .article_content{
+  padding: 20px;
+}
+
+#col_central .article .article_content h2{
+  font-size: 1.3em;
+}
+
+#col_central .article .article_content h3{
+  font-size: 1.1em;
+}
+
+#col_central .article .article_content h4{
+  font-size: 1em;
+}
+
+#col_central .article .article_content p{
+  font-size: 1em;
+}
+
+#col_central .article .article_content a{
+  color: rgb(52, 152, 219);
+  font-weight: lighter;
+}
+
+
+/***************************************** FIN CONTENIDO DE LA PARTE CENTRAL  *******************************************/
+
+/***************************************** CONTENIDO DE LA PARTE DERECHA  *******************************************/
+
+#col_derecha{
+  padding: 0px 5px 0px 10px;
+  width: 17%;
+}
+
+#col_derecha .article .article_title h2{
+  font-size: 1em;
+}
+
+#col_derecha .article .article_content{
+  padding: 10px;
+}
+
+#col_derecha .article .article_content h2{
+  font-size: 1em;
+}
+
+#col_derecha .article .article_content h3{
+  font-size: 0.9em;
+}
+
+#col_derecha .article .article_content h4{
+  font-size: 0.8em;
+}
+
+#col_derecha .article .article_content p{
+  font-size: 0.8em;
+}
+
+#col_derecha .article .article_content a{
+  color: rgb(52, 152, 219);
+  font-weight: lighter;
+}
+
+/***************************************** FIN CONTENIDO DE LA PARTE DERECHA  *******************************************/
+
+/***************************************** OBJETOS GENERALES DEL CONTENIDO  *******************************************/
+
+/******** Estilos generales de articulo ********/
+
+.article {
+  background-color: rgba(203, 203, 242, 0.3);
+  border-radius: 10px 10px 0px 0px ;
+  box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  margin-bottom: 30px;
+  width: auto;
+}
+
+.article .article_title{
+  background: -webkit-linear-gradient(top, rgba(3, 15, 114, 0.7), rgba(3, 15, 114, 1));
+  background: -moz-linear-gradient(top, rgba(3, 15, 114, 0.7), rgba(3, 15, 114, 1));
+  background: -ms-linear-gradient(top, rgba(3, 15, 114, 0.7), rgba(3, 15, 114, 1));
+  background: -o-linear-gradient(top, rgba(3, 15, 114, 0.7), rgba(3, 15, 114, 1));
+  border-radius: 10px 10px 0px 0px ;
+  padding: 3px 10px;
+  width: auto;
+}
+
+.article .article_title h2{
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  text-shadow: 1px 1px 1px rgba(60,60,60,0.8);
+  text-transform: capitalize;
+}
+
+/* contenido del artuculo */
+.article .article_content .article_menu *{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.article .article_content {
+  border: 1px rgba(203, 203, 242, 0.8) solid;
+}
+
+.article .article_content h2{
+  font-weight: bold;
+  text-shadow: 2px 1px 0px rgba(255,255,255,0.9);
+  text-transform: uppercase;
+}
+
+.article .article_content h3{
+  font-weight: lighter;
+  text-shadow: 2px 1px 0px rgba(255,255,255,0.9);
+  font-style: italic;
+}
+
+.article .article_content h4{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.article .article_content p{
+  font-size: 1em;
+  font-weight: lighter;
+  margin: 10px 0px;
+  text-align: justify;
+}
+
+.article .article_content a{
+  color: rgb(52, 152, 219);
+  font-weight: lighter;
+}
+
+.article .article_content img{
+  width: 100%;
+}
+
+.article .article_content .image_content {
+  padding: 10px;
+  text-align: center;
+}
+
+.article .article_content .image_content img{
+  max-height: 120px;
+  margin: 0 auto;
+  box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  width: auto;
+}
+
+/*texto que marca que un campo es obilgatorio*/
+
+.required {
+  color: rgba(255, 62, 37, 1);
+}
+
+p.required {
+  display: block;
+  font-size: 0.95em !important;
+  font-weight: bolder;
+  margin: 0 !important;
+}
+
+/******** Fin Estilos generales de articulo ********/
+
+/******************* ESTILO PARA LOS MENUS *********************/
+/* contenido del menu */
+
+ul.menu {
+  list-style:none;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+ul.menu li.nivel1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+
+  border: 1px rgba(60,60,60,0.1) solid;
+  color: rgb(255, 255, 255) !important;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgb(3, 15, 114);
+}
+
+ul.menu li.nivel2 { 
+	-o-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  border: 1px rgba(60,60,60,0.1) solid;
+  color: rgb(3, 15, 114) !important;
+  cursor: pointer;
+  font-weight: lighter;
+  padding: 2px 4px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  width: 100%;
+}
+
+ul.menu li.nivel2 span {
+  margin-right: 0.7em; 
+}
+
+ul.menu li.nivel2 span.badge {
+  background-color: rgb(3, 15, 114);
+}
+
+
+/*Estilo para cuando el usuario tiene mensajes sin leer*/
+ul.menu li.nivel2 span.sin_leer{
+  background-color:  rgba(242, 240, 106, 1);
+  color: rgb(3, 15, 114) ;
+}
+
+/* Fin Estilo para cuando el usuario tiene mensajes sin leer*/
+
+ul.menu li.nivel2:hover {
+	-o-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+
+  /*combinaciones para amarillo*/
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.4)), to(rgba(242, 240, 106, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.4), rgba(242, 240, 106, 0.6));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.4), rgba(242, 240, 106, 0.6));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.4), rgba(242, 240, 106, 0.6));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.4), rgba(242, 240, 106, 0.6));
+
+  color: rgba(3, 15, 114, 0.6) !important;
+  text-shadow: 1px 1px 0px rgb(255, 255, 255);
+
+  /*combinaciones para azul*/
+/*  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  color: rgb(255, 255, 255) !important;
+  text-shadow: 1px 1px 1px rgb(3, 15, 114);
+*/
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+/******************* FIN ESTILO PARA LOS MENUS *********************/
+
+/******************* ESTILO PARA LOS FORMULARIOS *********************/
+.clear {
+  display: block;
+}
+
+.form {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form .form_title {
+  margin-bottom: 20px;
+}
+
+.form .form_content {
+  width: 100%;
+}
+
+.form .form_field {
+  display: inline-block;
+  margin: 5px auto;
+  padding: 7px;
+  vertical-align: bottom;
+}
+
+.form .form_field h3 {
+  text-shadow: none; 
+}
+
+
+.form .form_field_1 {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.form .form_field_15 {
+  min-width: 75%;
+  max-width: 75%;
+}
+
+
+
+.form .form_field_2 {
+  min-width: 49.5%;
+  max-width: 49.5%;
+}
+
+.form .form_field_3 {
+  min-width: 33%;
+  max-width: 33%;
+}
+
+.form .form_field_4 {
+  min-width: 24.5%;
+  max-width: 24.5%;
+}
+
+.form .form_field_5 {
+  min-width: 19.5%;
+  max-width: 19.5%;
+}
+
+.form .form_field_6 {
+  min-width: 16.1%;
+  max-width: 16.1%;
+}
+
+.form .form_field input, .form .form_field select, 
+.form .form_button_box button, .form .form_button_box input, 
+#listas_length select, #listas_filter input, #fila_listas tbody td input{
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px rgba(60, 60, 60, 0.6) solid;
+  border-radius: 4px;
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0.25);
+  color: rgba(60, 60, 60, 0.7);
+  font-family: "Arial","Helvetica",sans-serif;
+  font-size: 1.1em;
+  margin: 2px auto;
+  padding: 2px;
+  height: 30px;
+  width: 100%;
+}
+
+.form .form_field textarea {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px rgba(60, 60, 60, 0.6) solid;
+  border-radius: 4px;
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0.3);
+  color: rgba(60, 60, 60, 0.7);
+  font-family: "Arial","Helvetica",sans-serif;
+  font-size: 1.1em;
+  margin: 2px auto;
+  padding: 2px;
+  height: 29px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.form .form_field input:focus, .form .form_field select:focus, .form .form_field textarea:focus, 
+.form .form_button_box input:focus, #listas_length select:focus, #listas_filter input:focus {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  /* amarillos */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.3)), to(rgba(242, 240, 106, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0);
+
+}
+
+.form .form_button_box button:focus {
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -moz-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -ms-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+  background: -o-linear-gradient(top, rgba(203, 203, 242, 0.4), rgba(203, 203, 242, 0.7));
+}
+
+.form .form_field input[type=radio], .form .form_field input[type=checkbox]{
+  /* amarillos */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.3)), to(rgba(242, 240, 106, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0);
+  color: #F7F7F7;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: auto;
+}
+
+.form .form_button_box{
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+}
+
+.form .form_button_box button,
+.form .form_button_box input[type=submit], .form .form_button_box input[type=button]{
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: rgba(3, 15, 114, 0.8);
+  box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 7px 9px -6px rgba(0, 0, 0, 0.64);
+  color: rgba(250, 250, 250, 1);
+  display: inline-block;
+  margin: 5px;
+  margin-top: 15px;
+  text-shadow: 1px 1px 1px rgba(60,60,60,0.8);
+  width: 140px;
+}
+
+.form .form_button_box button:hover,
+.form .form_button_box input[type=submit]:hover, .form .form_button_box input[type=button]:hover,
+.form .form_button_box button:focus,
+.form .form_button_box input[type=submit]:focus, .form .form_button_box input[type=button]:focus {
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: rgba(3, 15, 114, 0.5);
+  color: rgba(250, 250, 250, 1);
+  cursor: pointer;
+}
+
+/******************* FIN ESTILO PARA LOS FORMULARIOS *********************/
+
+/******************* ESTILO PARA LAS TABLAS DE CONSULTA *********************/
+
+.table_content {
+  display: block;
+  font-family:  "Century Gothic", sans-serif;
+  margin-bottom: 20px;
+  max-height: 600px;
+  min-height: 100px;
+  overflow: auto;
+  width: 100%;
+}
+
+.form_table {
+  max-height: 1200px;
+  min-height: 300px;  
+}
+
+.listas {
+  background-color: rgba(255, 255, 255, 1);
+  border-collapse: separate;
+  border-spacing: 1px;
+  display: inline-table;
+  font-size: 1.1em;
+  font-weight: lighter;
+  margin: 0px;
+  width: 100%;
+}
+
+.listas th{
+  background: -webkit-linear-gradient(top, rgba(3, 15, 114, 0.4), rgba(3, 15, 114, 0.6));
+  background: -moz-linear-gradient(top, rgba(3, 15, 114, 0.4), rgba(3, 15, 114, 0.6));
+  background: -ms-linear-gradient(top, rgba(3, 15, 114, 0.4), rgba(3, 15, 114, 0.6));
+  background: -o-linear-gradient(top, rgba(3, 15, 114, 0.4), rgba(3, 15, 114, 0.6));
+  border: 1px solid rgba(33, 33, 33, 0.14);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: lighter;
+  padding: 4px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(3, 15, 114);
+  text-transform: capitalize;
+}
+
+.listas td{
+  font-size: 0.8em;
+  padding: 3px;
+  border: 1px solid rgba(33, 33, 33, 0.1);
+}
+
+.listas td.cell_center {
+  text-align: center;
+}
+.listas .fila_title{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.8)), to(rgba(52, 152, 219, 1)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 1));
+
+  border: 1px rgba(60,60,60,0.1) solid;
+  color: rgb(255, 255, 255) !important;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgb(3, 15, 114);
+}
+
+.listas .fila_listas{
+  background-color: rgba(52, 152, 219, 0.01);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*Estilo para mensaje no vistos*/
+.listas .no_visto{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 152, 219, 0.05)), to(rgba(52, 152, 219, 0.2)));
+  background: -webkit-linear-gradient(top, rgba(52, 152, 219, 0.05), rgba(52, 152, 219, 0.2));
+  background: -moz-linear-gradient(top, rgba(52, 152, 219, 0.05), rgba(52, 152, 219, 0.2));
+  background: -ms-linear-gradient(top, rgba(52, 152, 219, 0.05), rgba(52, 152, 219, 0.2));
+  background: -o-linear-gradient(top, rgba(52, 152, 219, 0.05), rgba(52, 152, 219, 0.2));
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.listas .fila_listas:hover, .listas .no_visto:hover{
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.3)), to(rgba(242, 240, 106, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  color: rgba(33, 33, 33, 1);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#listas_length, #listas_filter {
+  display: inline-block;
+  margin: 2px;
+  max-width: 45%;
+  min-width: 45%;
+  text-align: center;
+}
+
+#listas_length label, #listas_filter label {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+#listas_length select {
+  min-width: 45%;
+  max-width: 45%;
+}
+
+#listas_filter input {
+  min-width: 60%;
+  max-width: 60%;
+}
+
+.listas tbody tr td input{
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px rgba(60, 60, 60, 0.6) solid;
+  border-radius: 4px;
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0.25);
+  color: rgba(60, 60, 60, 0.7);
+  font-family: "Arial","Helvetica",sans-serif;
+  margin: 2px auto;
+  padding: 2px;
+  height: 25px;
+  width: 100%;
+}
+
+.listas tbody tr td input:focus{
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  /* amarillos */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 240, 106, 0.3)), to(rgba(242, 240, 106, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -moz-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -ms-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  background: -o-linear-gradient(top, rgba(242, 240, 106, 0.3), rgba(242, 240, 106, 0.5));
+  box-shadow: inset 0px 7px 9px -6px rgba(60, 60, 60, 0);
+}
+
+
+/******************* FIN ESTILO PARA LAS TABLAS DE CONSULTA *********************/
+
+/******************* ESTILO PARA BOTONES DE LAS TABLAS *********************/
+
+.ok, .remove, .upload, .refresh{
+  border-radius: 20px;
+  text-shadow: 1px 2px 1px rgba(33, 33, 33, 3);
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.1em;
+  padding: 5px;
+  box-shadow: 0 7px 9px -6px rgba(0, 0, 0, 0.64);
+}
+
+/******************* FIN ESTILO PARA BOTONES DE LAS TABLAS *********************/
+
+/******************* ESTILO PARA BOTONES - OK,REFRESH *********************/
+
+.ok, .refresh{
+  background-color: rgba(73, 131, 13, 1);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ok:hover, .refresh:hover{
+  background-color: rgba(73, 131, 13, 0.8);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/******************* FIN ESTILO PARA BOTON - OK *********************/
+
+/******************* ESTILO PARA BOTON - REMOVE *********************/
+
+.remove{
+  background-color: rgba(220, 58, 0, 1);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.remove:hover{
+  background-color: rgba(220, 58, 0, 0.8);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/******************* FIN ESTILO PARA BOTON - REMOVE *********************/
+
+/******************* ESTILO PARA BOTON - UPLOAD *********************/
+
+.upload{
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: rgba(3, 15, 114, 1);
+}
+
+.upload:hover{
+  background-color: rgba(3, 15, 114, 0.8);
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/******************* FIN ESTILO PARA BOTON - UPLOAD *********************/
+
+
+/***************************************** FIN OBJETOS DEL CONTENIDO  *******************************************/
+
+
+/***************************************** OBJETOS DEL FOOTER  *******************************************/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background-color: rgba(52, 152, 219, 1);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/***************************************** FIN OBJETOS DEL FOOTER  *******************************************/
+
+/***************************************** ESTILOS DE INGRESO A LA PARTE DE SUSTENTACION  *******************************************/
+
+#sustentacion{
+  left: -80px;
+  min-height: 50px;
+  position: fixed;
+  top: 50%;
+  text-shadow: 2px 2px 0px #000;
+  transition:all 0.6s;
+  width: 130px;
+}
+
+#sustentacion span{
+  color: red;
+}
+
+#sustentacion:hover {
+  left: 0;
+}
+
+#sustentacion a{
+  color: red;
+  font-family:  "Century Gothic", "Times Roman", sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/***************************************** FIN ESTILOS DE INGRESO A LA PARTE DE SUSTENTACION  *******************************************/
+
+/***************************************** ESTILOS DEPENDIANDO RESOLUCION DE PANTALLA  *******************************************/
+
+@media screen and (min-width: 1201px){
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px){
+  body {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  body {
+    font-size: 9px;
+  }
+}
+
+
+/***************************************** FIN ESTILOS DEPENDIANDO RESOLUCION DE PANTALLA  *******************************************/
+

@@ -1,0 +1,394 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE COLEGIOS -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldNitColegio");
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarColegio').click(function(event){
+				        if( prdgm_validarNumeroDIV('txtfldNitColegio','NIT') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldNomColegio','Nombre Colegio') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldDireccionColegio','Dirección') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldTelefonoColegio','Teléfono') == false) return false;
+				        if( prdgm_validarEmailDIV('mailEmailColegio','Correo eléctronico') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldCiudadColegio','Ciudad') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldLocalidadColegio','Localidad') == false) return false;
+						// se envia datos del formulario				        
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Administrar Colegios</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" name="fromAdministrarColegios" id="fromAdministrarColegios">
+								<div class="form_content" >
+									<p>En el siguiente formulario por favor ingrese los datos del colegio.</p>
+									 <div class="form_field form_field_3" >
+										<label for="txtfldNitColegio"><h3>NIT:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldNitColegio" id="txtfldNitColegio" placeholder="Ej: 8008008001">
+									</div>
+                                    <div class="form_field form_field_2" >
+										<label for="txtfldNomColegio"><h3>Nombre Colegio:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldNomColegio" id="txtfldNomColegio" placeholder="Ej: Institución Educativa Distrital OEA">
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_2">
+										<label for="txtfldDireccionColegio"><h3>Dirección:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldDireccionColegio" id="txtfldDireccionColegio" placeholder="Ej: Carrera 48 No. 65 - 98" >
+									</div>
+									<div class="form_field form_field_4">
+										<label for="txtfldTelefonoColegio"><h3>Teléfono:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldTelefonoColegio" id="txtfldTelefonoColegio" placeholder="Ej: (571) 8899554" >
+									</div>
+                                    <div class="form_field form_field_4">
+										<label for="mailEmailColegio"><h3>Correo eléctronico:<sup class="required"> * </sup></h3></label>
+										<input type="mail" name="mailEmailColegio" id="mailEmailColegio" placeholder="Ej: mail@mail.com" >
+									</div>
+									<div class="clear"></div>
+                                    <div class="form_field form_field_3">
+										<label for="txtfldCiudadColegio"><h3>Ciudad:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldCiudadColegio" id="txtfldCiudadColegio" placeholder="Ej: Bogotá" >
+									</div>
+                                    <div class="form_field form_field_3">
+										<label for="txtfldLocalidadColegio"><h3>Localidad:</h3></label>
+										<input list="listaLocalidad" name="txtfldLocalidadColegio" id="txtfldLocalidadColegio" placeholder="Ej: Kennedy" >
+                                        <datalist name="listaLocalidad" id="listaLocalidad">
+											<option value="Usaquén">Usaquén</option>
+											<option value="Chapinero">Chapinero</option>
+											<option value="Santa fe">Santa fe</option>
+											<option value="San Cristóbal">San Cristóbal</option>
+                                            <option value="Usme">Usme</option>
+                                            <option value="Tunjuelito">Tunjuelito</option>
+                                            <option value="Bosa">Bosa</option>
+                                            <option value="Kennedy">Kennedy</option>
+                                            <option value="Fontibón">Fontibón</option>
+                                            <option value="Engativá">Engativá</option>
+                                            <option value="Suba">Suba</option>
+                                            <option value="Barrios Unidos">Barrios Unidos</option>
+                                            <option value="Teusaquillo">Teusaquillo</option>
+                                            <option value="Los Mártires">Los Mártires</option>
+                                            <option value="Antonio Nariño">Antonio Nariño</option>
+                                            <option value="Puente Aranda">Puente Aranda</option>
+                                            <option value="La Candelaria">La Candelaria</option>
+                                            <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+                                            <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+                                            <option value="Sumapaz">Sumapaz</option>
+										</datalist>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarColegio" id="btnSbmtRegistrarColegio">Registrar</button>
+										<button type="submit" name="btnSbmtActualizarColegio" id="btnSbmtActualizarColegio">Actualizar</button>
+										<button type="submit" name="btnSbmtConsultarColegio" id="btnSbmtConsultarColegio">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LISTA DE COLEGIOS  -->
+						<h2>Listado de colegios</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											colegio
+										</th>
+										<th>
+											dirección
+										</th>
+										<th>
+											teléfono
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											COLEGIO O.E.A INSTITUCIÓN EDUCATIVA DISTRITAL
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf bnhm
+										</td>
+										<td>
+											571 8954260
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											INSTITUCIÓN EDUCATIVA DISTRITAL NUEVO KENNEDY
+										</td>
+										<td>
+											sdfsdf sdfsdf sdfsdf sdgsdg
+										</td>
+										<td>
+											571 8954259
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

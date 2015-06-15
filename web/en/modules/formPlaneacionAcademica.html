@@ -1,0 +1,156 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE ASIGNATURAS DECRETADAS POR EL MINISTERIO DE EDUCACION -->
+				<script>
+				$(document).ready(function(){
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Register Academic Planning</h2>
+					</div>
+					<div class="article_content">
+						<form action="" method="get">
+							<div class="form">
+								<div class="form_title">
+									<h2></h2>
+								</div>
+								<div class="form_content">
+									<p>In this form the record of academic planning is done by course.</p>
+									<div class="form_field form_field_2">
+										<label for="slctAsignaturaColegio"><h3>Subject<sup class="required"> * </sup></h3></label>
+										<select id="slct" name="slctAsignaturaColegio" requierd>
+											<option value="" disabled="disabled" selected="selected">Select</option>
+											<option value="Ciencias Sociales">Social Science</option>
+											<option value="Ciencias Naturales">Natural Sciences</option>
+											<option value="Educacion Artística">Artistic Education</option>
+											<option value="Educacion ética">Ethics Education</option>
+											<option value="Educación física">Sport Education</option>
+											<option value="Idiomas Extranjeros">Foreign Languages</option>
+											<option value="Lengua castellana">Spanish Language</option>
+											<option value="Matemáticas">Mathematics</option>
+										</select>
+									</div>
+									<div class="form_field form_field_2">
+										<label for="slctGrado"><h3>Grade<sup class="required"> * </sup></h3></label>
+										<select id="slct" name="slctGrado" requierd>
+											<option value="" disabled="disabled" selected="selected">Select</option>
+											<option value="1">1 - First </option>
+											<option value="2">2 - Second</option>
+											<option value="3">3 - Third</option>
+											<option value="4">4 - Fourth</option>
+											<option value="5">5 - Fifth</option>
+											<option value="6">6 - Sixth</option>
+											<option value="7">7 - Seventh</option>
+											<option value="8">8 - Eighth</option>
+											<option value="9">9 - Ninth</option>
+											<option value="10">10 - Tenth</option>
+											<option value="11">11 - Eleventh</option>
+											<option value="12">12 - Twelfth</option>
+										</select>
+									</div>
+									<div class="form_field form_field_1">
+										<label for="txtareaComponente"><h3>Component<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaComponente" name="txtareaComponente" placeholder="Detailed Description Component" ></textarea>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="txttemaaevaluar"><h3>Topic to assess<sup class="required"> * </sup></h3></label>
+										<input type ="txtemaaevaluar" name="txttemaaevaluar" id="txttemaaevaluar" placeholder="Topic to assess" required>
+									</div>	
+									<div class="form_field form_field_2">
+										<label for="slctPeriodo"><h3>Period<sup class="required"> * </sup></h3></label>
+										<select id="slctPeriodo" name="slctPeriodo" requierd>
+											<option value="" disabled="disabled" selected="selected">Select</option>
+											<option value="1">Period 1</option>
+											<option value="2">Period 2</option>
+											<option value="3">Period 3</option>
+											<option value="4">Period 4</option>
+										</select>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="txttemaaevaluar"><h3>Topic to assess<sup class="required"> * </sup></h3></label>
+										<input type ="txtemaaevaluar" name="txttemaaevaluar" id="txttemaaevaluar" placeholder="Topic to assess" required>
+									</div>	
+									<div class="form_field form_field_2">
+										<label for="slctPeriodo"><h3>Period<sup class="required"> * </sup></h3></label>
+										<select id="slctPeriodo" name="slctPeriodo" requierd>
+											<option value="" disabled="disabled" selected="selected">Select</option>
+											<option value="1">Period 1</option>
+											<option value="2">Period 2</option>
+											<option value="3">Period 3</option>
+											<option value="4">Period 4</option>
+										</select>
+									</div>
+									<div class="clear"></div>
+									<p class="required">(*) Required</p>
+									<div class="clear"></div>
+									<h3>
+										Add Topic										
+										<button type="button" id="btnAgregarTema" name=""><span class="glyphicon glyphicon-plus"></span></button>
+									</h3>
+									<div class="form_button_box">
+										<button type="submit" name="btnSbmtRegistrarAsignatura" id="btnSbmtRegistrarAsignatura">Register</button>
+										<button type="submit" name="btnSbmtActualizarAsignatura" id="btnSbmtActualizarAsignatura">Update</button>
+										<button type="submit" name="btnSbmtConsultarAsignatura" id="btnSbmtConsultarAsignatura">Consult</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- LISTA DE ASIGNATURAS -->
+						<h2>Listado de Asignaturas</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Signature
+										</th>
+										<th style="width: 15px;">
+											Load
+										</th>
+										<th style="width: 15px;">
+											Status
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											Natural Sciences
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									<tr class="fila_listas">
+										<td>
+											Spanish
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											Maths
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+

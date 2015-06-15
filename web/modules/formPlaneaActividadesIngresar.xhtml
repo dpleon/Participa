@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./../Templates/TemplateParticipa.xhtml">
+
+            <ui:define name="scripts">
+                scripts
+            </ui:define>
+
+            <ui:define name="nav">
+                <li class="nivel1"><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
+                <li class="nivel1"><a href=""><span class="fa fa-chevron-circle-down"></span>Colegio</a>
+                    <ul>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 1</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 2</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 3</a></li>
+                    </ul>
+                </li>
+                <li class="nivel1"><a href=""><span class="fa fa-chevron-circle-down"></span>Programa</a>
+                    <ul>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 1</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 2</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 3</a></li>
+                    </ul>
+                </li>
+                <li class="nivel1"><a href=""><span class="fa fa-chevron-circle-down"></span>ArticulaciÃ³n</a>
+                    <ul>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 1</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 2</a></li>
+                        <li><a href=""><span class="fa fa-chevron-circle-right"></span>Algo 3</a></li>
+                    </ul>
+                </li>
+            </ui:define>
+
+            <ui:define name="left">
+                <!-- ARTICULO DE PRUEBA PARA DE CONTENIDO DE TEXTOS -->
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Proyectos</h2>
+                    </div>
+                    <div class="article_content">
+                        <h2>EducaciÃ³n Inclusiva para NiÃ±os y JÃ³venes con LimitaciÃ³n Visual Aula Regular</h2>
+                        <h3>MITO O REALIDAD</h3>
+                        <!-- <h4>Eam ut ponderum quaestio</h4> -->
+                        <p> existe en la sociedad una poblaciÃ³n cuyas necesidades e intereses comenzarÃ¡n a ser truncada de la primera infancia, nos referimos a las personas con limitaciÃ³n visual n; a veces, cuando uno de los miembros de la familia con discapacidad lleva al conflicto, que por lo tanto afecta a la persona afectada, mientras que esta situaciÃ³n se multiplica cuando la sociedad a travÃ©s de la indiferencia o la ignorancia empieza a cerrar sus puertas a principios de realizaciÃ³n.</p>
+                        <br/> tomado de <br/>
+                        http://www.redacademica.edu.co/webcolegios / 08 / OEA / p_invidentes.html
+                    </div>
+                </div>
+            </ui:define>
+
+            <ui:define name="content">
+                <div class="article">
+                    <div class="article_title">
+                        <h2>Competencias</h2>
+                    </div>
+                    <div class="article_content" >
+                        <div class="form">
+                            <form action="" method="get" id="formCompetenciasAprobar" name="formCompetenciasAprobar">
+                                <div class="form_content" >
+                                    <p>En el siguiente formulario debe aprobar las competencias que se desarrollarán en el periodo.</p>
+                                    <div class="form_field form_field_4" >
+                                        <label for="slctCodigoCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+                                        <select id="slctCodigoCurso" name="slctCodigoCurso">
+                                            <option value="">Seleccione</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </div>
+                                    <div class="form_field form_field_2" >
+                                        <label for="slctAsignaturaDocente"><h3>Docente:<sup class="required"> * </sup></h3></label>
+                                        <select id="slctAsignaturaDocente" name="slctAsignaturaDocente" >
+                                            <option value="">Seleccione</option>
+                                            <option value="Javier Martinez">Javier Martinez</option>
+                                            <option value="Pablo Manrrique">Pablo Manrrique</option>
+                                            <option value="Teresa Lozada">Teresa Lozada</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <h2>Listado de logros</h2>
+                                    <div class="table_content">
+                                        <table id="listas" class="display listas" >
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Asignatura
+                                                    </th>
+                                                    <th>
+                                                        Detalle Logro
+                                                    </th>
+                                                    <th>
+                                                        Evaluación
+                                                    </th>
+                                                    <th style="width: 15px;">
+                                                        Estado
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="fila_listas">
+                                                    <td>
+                                                        Ciencias sociales
+                                                    </td>
+                                                    <td>
+                                                        EXPLICA LOS HECHOS OCURRIDOS DURANTE LAS EDADES MEDIA Y MODERNA EN EL ANTIGUO CONTINENTE Y SU INFLUENCIA EN COLOMBIA
+                                                    </td>
+                                                    <td>
+                                                        Cognitiva
+                                                    </td>
+                                                    <td class="cell_center">
+                                                        <button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form_button_box">
+                                        <p class="required">(*) campos obligatorios</p>
+                                        <button type="submit" name="btnSbmtAprobarLogro" id="btnSbmtAprobarLogro">Aprobar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+
+            <ui:define name="right">
+                right
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,151 @@
+				<!-- ARTICULO PARA ADMINISTRAR CITACIONES -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarCita').click(function(event){
+				        if( prdgm_validarSelectDIV('slctTipoCitacion','Tipo de Citación') == false) return false;
+				        if( prdgm_validarSelectDIV('slctCodigoCurso','Curso') == false) return false;
+				        if( prdgm_validarSelectDIV('slctNombreAlumno','Alumno') == false) return false;
+				        if( prdgm_validarTextAreaDIV('txtareaMotivoCitacion','Motivo') == false) return false;
+				        if( prdgm_validarTextoDIV('dateFechaCitacion','Fecha') == false) return false;
+				        if( prdgm_validarTextoDIV('hrHoraCitacion','Hora') == false) return false;
+				        if( prdgm_validarSelectDIV('slctEstadoCitacion','Estado citación') == false) return false;
+						// se envia datos del formulario
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					});
+					// llamar calendario
+					$( "#dateFechaCitacion" ).datepicker({
+						dateFormat: "yy-mm-dd",
+						changeYear: true,
+						beforeShowDay: $.datepicker.noWeekends
+					});
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Citaciones</h2>
+					</div>
+					<div class="article_content" >
+						<form action="" method="get" >
+							<div class="form">
+								<div class="form_content" >
+									<p>En el siguiente formulario por favor diligencie los detalles de la citación.</p>
+								<div class="form_field form_field_4" >
+										<label for="slctTipoCitacion"><h3>Tipo de Citación:<sup class="required"> * </sup></h3></label>
+										<select id="slctTipoCitacion" name="slctTipoCitacion">
+											<option value="">Seleccione</option>
+											<option value="disciplinaria">Disciplinaria</option>
+											<option value="academica">Académica</option>
+										</select>
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="slctCodigoCurso"><h3>Curso:<sup class="required"> * </sup></h3></label>
+										<select id="slctCodigoCurso" name="slctCodigoCurso">
+											<option value="">Seleccione</option>
+											<option value="101a">101A</option>
+											<option value="201a">201A</option>
+											<option value="301a">301A</option>
+											<option value="401a">401A</option>
+											<option value="501a">501A</option>
+											<option value="601a">601A</option>
+											</select>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="slctNombreAlumno"><h3>Alumno:<sup class="required"> * </sup></h3></label>
+										<select id="slctNombreAlumno" name="slctNombreAlumno">
+											<option value="">Seleccione</option>
+											<option value="pordefectonmbre">viene alumno</option>
+											<option value="viene tabla alumnos">viene alumno</option>
+											</select>
+									</div>	  
+                                    <div class="clear"></div>
+									<div class="form_field form_field_1">
+										<label for="txtareaMotivoCitacion"><h3>Motivo:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaMotivoCitacion" name="txtareaMotivoCitacion" placeholder="Desripción de la causa de la citación" ></textarea>
+									</div>
+									<div class="clear"></div>
+                                    <div class="form_field form_field_5" >
+										<label for="dateFechaCitacion"><h3>Fecha:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="dateFechaCitacion" id="dateFechaCitacion" placeholder="aaaa-mm-dd" readonly="readonly">
+									</div>
+                                    <div class="form_field form_field_5">
+										<label for="hrHoraCitacion"><h3>Hora:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="hrHoraCitacion" id="hrHoraCitacion" placeholder="00:00" onkeypress="prdgm_validaHoraMilitar(this,':',patron2,true);" onkeyup="prdgm_validaHoraMilitar(this,':',patron2,true);">
+									</div>
+									<div class="form_field form_field_5" >
+										<label for="slctEstadoCitacion"><h3>Estado citación:<sup class="required"> * </sup></h3></label>
+										<select id="slctEstadoCitacion" name="slctEstadoCitacion">
+											<option value="">Seleccione</option>
+											<option value="Activa">Activa</option>
+											<option value="Terminada">Terminada</option>
+											<option value="Pospuesta">Pospuesta</option>
+											<option value="No cumplida">No cumplida</option>
+											</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarCita" id="btnSbmtRegistrarCita" value="btnSbmtRegistrarCita">Registrar</button>
+										<button type="submit" name="btnSbmtActualizarCita" id="btnSbmtActualizarCita" value="btnSbmtActualizarCita">Actualizar</button>
+										<button type="submit" name="btnSbmtConsultarCita" id="btnSbmtConsultarCita" value="btnSbmtConsultarCita">Consultar</button>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- LISTA DE CITACIONES -->
+						<h2>Listado de Citaciones</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Fecha
+										</th>
+										<th>
+											Hora
+										</th>
+										<th>
+											Citación
+										</th>
+										<th>
+											Alumno
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>									
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											2015-04-02 
+										</td>
+										<td>
+											08:00
+										</td>
+										<td>
+											Disciplina
+										</td>
+										<td>
+											Luis Miguel Mora
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+

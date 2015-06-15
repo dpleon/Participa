@@ -1,0 +1,107 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE SALONES -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("txtfldNombreSalon");
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarSalon').click(function(event){
+				        if( prdgm_validarTextoDIV('txtfldNombreSalon','Salón') == false) return false;
+		                if( prdgm_validarTextAreaDIV('txtareaDescripcionSalon','Descripción') == false) return false;
+						// se envia datos del formulario				        
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Manage Classroom</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarSalones" name="formAdministrarSalones">
+								<div class="form_content" >
+									<p> In the form below you can manage classrooms available in the school, please log data lounge.</p>
+									 <div class="form_field form_field_5" >
+										<label for="txtfldNombreSalon"><h3>Classroom:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="txtfldNombreSalon" id="txtfldNombreSalon" placeholder="Example: 203">
+									</div>
+									<div class="form_field form_field_15">
+										<label for="txtareaDescripcionSalon"><h3>Description:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaDescripcionSalon" name="txtareaDescripcionSalon" placeholder="" ></textarea>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" name="btnSbmtRegistrarSalon" id="btnSbmtRegistrarSalon" value="btnSbmtRegistrarSalon">Register</button>
+										<button type="submit" name="btnSbmtActualizarSalon" id="btnSbmtActualizarSalon" value="btnSbmtActualizarSalon">Update</button>
+										<button type="submit" name="btnSbmtConsultarSalon" id="btnSbmtConsultarSalon" value="btnSbmtConsultarSalon">Consult</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LIST OF CLASSROOMS -->
+						<h2>List  of Classrooms</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Classroom
+										</th>
+										<th>
+											Description
+										</th>
+										<th>
+											Available
+										</th>
+										<th style="width: 15px;">
+											Load
+										</th>
+										<th style="width: 15px;">
+											Estate
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											101
+										</td>
+										<td>
+											El salón se encuentra ubicado en el piso 1 
+										</td>
+										<td>
+											No disponible (1103)
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											102
+										</td>
+										<td>
+											El salón se encuentra ubicado en el piso 1 
+										</td>
+										<td>
+											Disponible
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

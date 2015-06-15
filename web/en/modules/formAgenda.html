@@ -1,0 +1,166 @@
+				<!-- ARTICULO PARA ADMINISTRAR LA AGENDA -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarTarea').click(function(event){
+				        if( prdgm_validarSelectDIV('slctCodigoCurso','Curso') == false) return false;
+				        if( prdgm_validarSelectDIV('slctAsignaturaColegio','Asignatura') == false) return false;
+				        if( prdgm_validarSelectDIV('txtfldTemaEvaluacion','Tema a evaluar') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldNombreTarea','Título tarea') == false) return false;
+				        if( prdgm_validarTextAreaDIV('txtareaDetalleTarea','Detalle de la tarea') == false) return false;
+				        if( 
+				        	prdgm_validarRadioBottomDIV('checkCognitiva','Competencia a Evaluar') == false
+				        	&& prdgm_validarRadioBottomDIV('checkProcedimental','Competencia a Evaluar') == false
+				        	&& prdgm_validarRadioBottomDIV('checkValorativa','Competencia a Evaluar') == false
+				        	&& prdgm_validarRadioBottomDIV('checkSocializadora','Competencia a Evaluar') == false
+				        ) return false;
+				        if( prdgm_validarTextoDIV('txtfldFechaTarea','Fecha tarea') == false) return false;
+				        if( prdgm_validarTextoDIV('txtfldFechaEnvio','Fecha máx envío') == false) return false;
+						// se envia datos del formulario				        
+				    });
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Academic Schedule</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAgenda" name="formAgenda">
+								<div class="form_content" >
+									<p>In the form below a description of the task at hand should be performed.</p>
+									 <div class="form_field form_field_4" >
+										<label for="slctCodigoCurso"><h3>Grade:<sup class="required"> * </sup></h3></label>
+										<select id="slctCodigoCurso" name="slctCodigoCurso">
+											<option value="">Select</option>
+											<option value="101a">101A</option>
+											<option value="201a">201A</option>
+											<option value="301a">301A</option>
+											<option value="401a">401A</option>
+											<option value="501a">501A</option>
+											<option value="601a">601A</option>
+										</select>
+									</div>	
+									<div class="form_field form_field_2" >
+										<label for="slctAsignaturaColegio"><h3>Subject:<sup class="required"> * </sup></h3></label>
+										<select id="slctAsignaturaColegio" name="slctAsignaturaColegio" >
+											<option value="">Select</option>
+											<option value="Ciencias Sociales">Social Science</option>
+											<option value="Ciencias Naturales">Natural Sciences</option>
+											<option value="Educacion Artística">Artistic Education</option>
+											<option value="Educacion ética">Ethics Education</option>
+											<option value="Educación física">Sport Education</option>
+											<option value="Idiomas Extranjeros">Foreign Languages</option>
+											<option value="Lengua castellana">Spanish Language</option>
+											<option value="Matemáticas">Mathematics</option>
+										</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_2" >
+										<label for="txtfldTemaEvaluacion"><h3>Topic to assess:<sup class="required"> * </sup></h3></label>
+										<select id="txtfldTemaEvaluacion" name="txtfldTemaEvaluacion" >
+											<option value="">Select</option>
+											<option value="algo">Load planning table</option>
+										</select>
+									</div>	
+									<div class="form_field form_field_2" >
+										<label for="txtfldNombreTarea"><h3>Task Title:<sup class="required"> * </sup></h3></label>
+										<input type ="text" name="txtfldNombreTarea" id="txtfldNombreTarea" placeholder="">
+									</div>	
+									<div class="clear">
+									<div class="form_field form_field_1">
+										<label for="txtareaDetalleTarea"><h3>Detail of the task:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaDetalleTarea" name="txtareaDetalleTarea" placeholder="Write an article in English" ></textarea>
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_1">
+										<h3><b>Evaluate competition</b><sup class="required"> * </sup></h3>
+									</div>
+									<div class="form_field form_field_3" >
+										<label for="checkCognitiva"><h3>Cognitive:</h3></label>
+										<input type="checkbox" name="checkCognitiva" id="checkCognitiva" value="">
+									</div>
+									<div class="form_field form_field_3" >
+										<label for="checkProcedimental"><h3>Procedural:</h3></label>
+										<input type="checkbox" name="checkProcedimental" id="checkProcedimental" value=""> 
+									</div>
+									<div class="clear"></div>
+									<div class="form_field form_field_3" >
+										<label for="checkValorativa"><h3>Valorative:</h3></label>
+										<input type="checkbox" name="checkValorativa" id="checkValorativa" value="">
+									</div>
+									<div class="form_field form_field_3" >
+										<label for="checkSocializadora"><h3>Socialization:</h3></label>
+										<input type="checkbox" name="checkSocializadora" id="checkSocializadora" value="">
+									</div>
+									<div class"clear"></div>
+									<div class="form_field form_field_3" >
+										<label for="txtfldFechaTarea"><h3>Task Date:<sup class="required"> * </sup></h3></label>
+										<input type="date" name="txtfldFechaTarea" id="txtfldFechaTarea" placeholder="0000-00-00" >
+									</div>
+                                   <div class="form_field form_field_3" >
+										<label for="txtfldFechaEnvio"><h3>Date maxima shipping:<sup class="required"> * </sup></h3></label>
+										<input type="date" name="txtfldFechaEnvio" id="txtfldFechaEnvio" placeholder="0000-00-00" >
+									</div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" name="btnSbmtRegistrarTarea" id="btnSbmtRegistrarTarea">Add</button>
+										<button type="submit" name="btnSbmtActualizarTarea" id="btnSbmtActualizarTarea">Update</button>
+										<button type="submit" name="btnSbmtConsultarTarea" id="btnSbmtConsultarTarea">Consult</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LISTA DE ASIGNATURAS -->
+						<h2>List of Subject</h2>
+						<div class="clear"></div>
+						<div class="table_content">
+							<table class="listas">
+								<tr>
+									<th>
+										Subject
+									</th>
+									<th>
+										Grade
+									</th>
+									<th>
+										Task
+									</th>
+									<th style="width: 15px;">
+										Load
+									</th>
+									<th style="width: 15px;">
+										Estate
+									</th>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										602A
+									</td>
+									<td>
+										Mathematics
+									</td>
+									<td>
+										Algebra exercises
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+
+
+
+
+
+
+
+
+						
+					</div>
+				</div>

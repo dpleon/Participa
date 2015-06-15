@@ -1,0 +1,37 @@
+				<!-- ARTUCULO DEL FORMULARIO DE CAMBIO DE CORREO  -->
+				<script>
+				$(document).ready(function(){
+					// Se enfoca el campo inicial
+					prdgm_focoObjeto("mailEmail");
+					// validacion del formulario
+				    $('button#btnSbmtActualizaMail').click(function(event){
+				        if( prdgm_validarEmailDIV('mailEmail','Correo Electrónico') == false) return false;
+				        // se envia el formulario
+				    });
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Cambiar Clave</h2>
+					</div>
+					<div class="article_content">
+						<form action="" method="get" id="formActualizaMail" name="formActualizaMail">
+							<div class="form">
+								<div class="form_title">
+									<p>Aqui puede cambiar el correo electronico registrado. Este le permite recuperar su clave en caso de olvidarla, para cambiar el correo debe digitar del nuevo correo, luego hacer click en el botón <b>Actualizar</b>.</p>
+								</div>
+								<div class="form_content">
+									<div class="form_field form_field_2">
+										<label for="mailEmail"><h3>Correo Electrónico:<sup class="required"> * </sup></h3></label>
+										<input type="mail" name="mailEmail" id="mailEmail" placeholder="Ej: mail@mail.com" required>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtActualizaMail" id="btnSbmtActualizaMail">Actualizar</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>

@@ -1,0 +1,137 @@
+				<!-- ARTICULO PARA ADMINISTRAR CITACIONES -->
+				<script>
+					$(document).ready(function(){
+						// validacion del formulario
+					    $('button#btnSbmtRegistrarCita').click(function(event){
+					        if( prdgm_validarSelectDIV('slctTipoCitacion','Tipo de Citación') == false) return false;
+					        if( prdgm_validarSelectDIV('slctCodigoCurso','Curso') == false) return false;
+					        if( prdgm_validarSelectDIV('slctNombreAlumno','Alumno') == false) return false;
+					        if( prdgm_validarTextAreaDIV('txtareaMotivoCitacion','Motivo') == false) return false;
+					        if( prdgm_validarTextoDIV('dateFechaCitacion','Fecha') == false) return false;
+					        if( prdgm_validarTextoDIV('hrHoraCitacion','Hora') == false) return false;
+					        if( prdgm_validarSelectDIV('slctEstadoCitacion','Estado citación') == false) return false;
+							// se envia datos del formulario
+					    });
+					});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Citations</h2>
+					</div>
+					<div class="article_content" >
+						<form action="" method="get" >
+							<div class="form">
+								<div class="form_content" >
+									<p>In the form below, please fill out the details of the citation.</p>
+								<div class="form_field form_field_4" >
+										<label for="slctTipoCitacion"><h3>Type of Citation:<sup class="required"> * </sup></h3></label>
+										<select id="slctTipoCitacion" name="slctTipoCitacion">
+											<option value="">Select</option>
+											<option value="disciplinaria">Disciplinary</option>
+											<option value="academica">Academic</option>
+										</select>
+									</div>
+									<div class="form_field form_field_4" >
+										<label for="slctCodigoCurso"><h3>Grade:<sup class="required"> * </sup></h3></label>
+										<select id="slctCodigoCurso" name="slctCodigoCurso">
+											<option value="">Select</option>
+											<option value="101a">101A</option>
+											<option value="201a">201A</option>
+											<option value="301a">301A</option>
+											<option value="401a">401A</option>
+											<option value="501a">501A</option>
+											<option value="601a">601A</option>
+											</select>
+									</div>
+									<div class="form_field form_field_2" >
+										<label for="slctNombreAlumno"><h3>Student:<sup class="required"> * </sup></h3></label>
+										<select id="slctNombreAlumno" name="slctNombreAlumno">
+											<option value="">Select</option>
+											<option value="pordefectonmbre">Diego Castañeda</option>
+											<option value="viene tabla alumnos">Diana León</option>
+											<option value="viene tabla alumnos">Luis Miguel Mora</option>
+											</select>
+									</div>	  
+                                    <div class="clear"></div>
+									<div class="form_field form_field_1">
+										<label for="txtareaMotivoCitacion"><h3>Motive:<sup class="required"> * </sup></h3></label>
+										<textarea id="txtareaMotivoCitacion" name="txtareaMotivoCitacion" placeholder="Description cause citation" ></textarea>
+									</div>
+									<div class="clear"></div>
+                                    <div class="form_field form_field_5" >
+										<label for="dateFechaCitacion"><h3>Date:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="dateFechaCitacion" id="dateFechaCitacion" placeholder="aaaa-mm-dd">
+									</div>
+                                    <div class="form_field form_field_5">
+										<label for="hrHoraCitacion"><h3>Time:<sup class="required"> * </sup></h3></label>
+										<input type="text" name="hrHoraCitacion" id="hrHoraCitacion" placeholder="00:00">
+									</div>
+									<div class="form_field form_field_5" >
+										<label for="slctEstadoCitacion"><h3>Citation state:<sup class="required"> * </sup></h3></label>
+										<select id="slctEstadoCitacion" name="slctEstadoCitacion">
+											<option value="">Select</option>
+											<option value="Activa">Activa</option>
+											<option value="Terminada">Finished</option>
+											<option value="Pospuesta">Postponed</option>
+											<option value="No cumplida">Unfulfilled</option>
+											</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) Required</p>
+										<button type="submit" name="btnSbmtRegistrarCita" id="btnSbmtRegistrarCita" value="btnSbmtRegistrarCita">Register</button>
+										<button type="submit" name="btnSbmtActualizarCita" id="btnSbmtActualizarCita" value="btnSbmtActualizarCita">Update</button>
+										<button type="submit" name="btnSbmtConsultarCita" id="btnSbmtConsultarCita" value="btnSbmtConsultarCita">Consult</button>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- LISTA DE CITACIONES -->
+						<h2>List of Citations</h2>
+						<div class="table_content">
+							<table class="listas">
+								<tr>
+									<th>
+										Date
+									</th>
+									<th>
+										Time
+									</th>
+									<th>
+										Citation
+									<th>
+										Student
+									</th>
+									<th style="width: 15px;">
+										Load
+									</th>									
+									<th style="width: 15px;">
+										Estate
+									</th>
+								</tr>
+								<tr class="fila_listas">
+									<td>
+										2015-04-02 
+									</td>
+									<td>
+										08:00
+									</td>
+									<td>
+										Disciplinary
+									</td>
+									<td>
+										Luis Miguel Mora
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+									</td>
+									<td class="cell_center">
+										<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+

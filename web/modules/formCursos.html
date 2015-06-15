@@ -1,0 +1,144 @@
+				<!-- FORMULARIO DE ADMINISTRACION DE CURSOS -->
+				<script>
+				$(document).ready(function(){
+					// validacion del formulario
+				    $('button#btnSbmtRegistrarCurso').click(function(event){
+				        if( prdgm_validarSelectDIV('slctYearLectivo','Año Lectivo') == false) return false;
+				        if( prdgm_validarSelectDIV('slctGrado','Grado') == false) return false;
+				        if( prdgm_validarSelectDIV('slctSubgrado','Subgrado') == false) return false;
+						// se envia datos del formulario				        
+				    });
+					// estilos para las tablas
+					$('#listas').dataTable({
+						"orderCellsTop": true
+					}); 
+				});
+				</script>
+				<div class="article">
+					<div class="article_title">
+						<h2>Administrar Cursos</h2>
+					</div>
+					<div class="article_content" >
+						<div class="form">
+							<form action="" method="get" id="formAdministrarCursos" name="formAdministrarCursos">
+								<div class="form_content" >
+									<p>En el siguiente formulario se puede administrar la información de los cursos disponibles para el año lectivo del colegio, por favor ingrese los datos del curso.</p>
+									<div class="form_field form_field_5">
+										<label for="slctYearLectivo"><h3>Año Lectivo:<sup class="required"> * </sup></h3></label>
+										<select id="slctYearLectivo" name="slctYearLectivo">
+											<option value="">Seleccione</option>
+											<option value="2015">2015</option>
+											<option value="2015-2016">2015-2016</option>
+											<option value="2016">2016</option>
+											<option value="2016-2017">2016-2017</option>
+										</select>
+									</div>
+									<div class="form_field form_field_5">
+										<label for="slctGrado"><h3>Grado:<sup class="required"> * </sup></h3></label>
+										<select id="slctGrado" name="slctGrado">
+											<option value="">Seleccione</option>
+											<option value="1">1 - Primero</option>
+											<option value="2">2 - Segundo</option>
+											<option value="3">3 - Tercero</option>
+											<option value="4">4 - Cuarto</option>
+											<option value="5">5 - Quinto</option>
+											<option value="6">6 - Sexto</option>
+											<option value="7">7 - Séptimo</option>
+											<option value="8">8 - Octavo</option>
+											<option value="9">9 - Noveno</option>
+											<option value="10">10 - Décimo</option>
+											<option value="11">11 - Once</option>
+											<option value="12">12 - Doce</option>
+										</select>
+									</div>
+									<div class="form_field form_field_5">
+										<label for="slctSubgrado"><h3>Subgrado:<sup class="required"> * </sup></h3></label>
+										<select id="slctSubgrado" name="slctSubgrado">
+											<option value="">Seleccione</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="04">05</option>
+											<option value="06">06</option>
+											<option value="A">A</option>
+											<option value="B">B</option>
+											<option value="C">C</option>
+											<option value="D">D</option>
+											<option value="E">E</option>
+											<option value="F">F</option>
+										</select>
+									</div>
+									<div class="clear"></div>
+									<div class="form_button_box">
+										<p class="required">(*) obligatorios</p>
+										<button type="submit" name="btnSbmtRegistrarCurso" id="btnSbmtRegistrarCurso" value="btnSbmtRegistrarCurso">Registrar</button>
+										<button type="submit" name="btnSbmtActualizarCurso" id="btnSbmtActualizarCurso" value="btnSbmtActualizarCurso">Actualizar</button>
+										<button type="submit" name="btnSbmtConsultarCurso" id="btnSbmtConsultarCurso" value="btnSbmtConsultarCurso">Consultar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- LISTA DE CURSOS -->
+						<h2>Listado de Cursos</h2>
+						<div class="table_content">
+							<table id="listas" class="display listas" >
+								<thead>
+									<tr>
+										<th>
+											Año Lectivo
+										</th>
+										<th>
+											Curso
+										</th>
+										<th>
+											Salón
+										</th>
+										<th style="width: 15px;">
+											Cargar
+										</th>
+										<th style="width: 15px;">
+											Estado
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="fila_listas">
+										<td>
+											2015
+										</td>
+										<td>
+											1103 
+										</td>
+										<td>
+											101
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-remove remove" aria-hidden="true"></button>
+										</td>
+									</tr>
+									<tr class="fila_listas">
+										<td>
+											2015
+										</td>
+										<td>
+											702 
+										</td>
+										<td>
+											204
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+										</td>
+										<td class="cell_center">
+											<button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>

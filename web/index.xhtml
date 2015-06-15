@@ -13,8 +13,13 @@
                         $('button#btnLogin').click(function(event){
                             if( prdgm_validarTextoDIV('txtfldUsuario','Clave') == false) return false;
                             if( prdgm_validarTextoDIV('pswdUsuario','Contraseña') == false) return false;
-                            $('#col_izquierda').load('modules/mnuUsuarios.html');
+                            $('#col_izquierda').load('modules/mnuUsuarios.xhtml');
                             $('#col_derecha').load('modules/articleLogin.html');
+                        });
+
+                        // redireccion al formulario de recordar contraseña
+                        $('a#linkRecordarClave').click(function(){
+                            $('#col_central').load('modules/formRecuperarClave.xhtml');
                         });
                     });
                 </script>
@@ -98,7 +103,7 @@
                                 <div class="form_button_box form_field form_field_1" style="text-align: center;">
                                     <button type="button" name="btnLogin" id="btnLogin">Ingresar</button>
                                     <p>
-                                        <a href="modules/formRecuperarClave.xhtml" name="linkRecordarClave" id="linkRecordarClave">Recordar Clave</a>
+                                        <a href="#" name="linkRecordarClave" id="linkRecordarClave">Recordar Clave</a>
                                     </p>
                                 </div>
                             </div>

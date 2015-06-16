@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <!-- LISTADO DE TAREAS  -->
+    <script>
+        $(document).ready(function(){
+            // estilos para las tablas
+            $('#listas').dataTable({
+                "orderCellsTop": true
+            }); 
+        });
+    </script>
+    <div class="article">
+        <div class="article_title">
+            <h2>Agenda Académica</h2>
+        </div>
+        <div class="article_content" >
+            <!-- LISTA DE ASIGNATURAS -->
+            <h2>Listado de Tareas</h2>
+            <p>En este listado se encontrarán las actividades planteadas dentro del plan de estudio y que serán entregadas dentro del tiempo estipulado en el listado. Las actividades no vistas por el estudiante se verán en color azul.</p>
+            <div class="clear"></div>
+            <div class="table_content">
+                <table id="listas" class="display listas" >
+                    <thead>
+                        <tr>
+                            <th>
+                                Asignatura
+                            </th>
+                            <th>
+                                Periodo
+                            </th>
+                            <th>
+                                Tarea
+                            </th>
+                            <th>
+                                Fecha presentación
+                            </th>
+                            <th style="width: 15px;">
+                                Cargar
+                            </th>
+                            <th style="width: 15px;">
+                                Estado
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="no_visto">
+                            <td>
+                                Matematicas
+                            </td>
+                            <td>
+                                Bimentre 2
+                            </td>
+                            <td>
+                                Ejercicios Algebra
+                            </td>
+                            <td>
+                                2015-04-02
+                            </td>
+                            <td class="cell_center">
+                                <button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+                            </td>
+                            <td class="cell_center">
+                                <button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+                            </td>
+                        </tr>
+                        <tr class="fila_listas">
+                            <td>
+                                Español
+                            </td>
+                            <td>
+                                Bimentre 2
+                            </td>
+                            <td>
+                                Ejercicios de lectura
+                            </td>
+                            <td>
+                                2015-04-05
+                            </td>
+                            <td class="cell_center">
+                                <button type="submit" class="glyphicon glyphicon-upload upload" aria-hidden="true"></button>
+                            </td>
+                            <td class="cell_center">
+                                <button type="submit" class="glyphicon glyphicon-ok ok" aria-hidden="true"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</html>

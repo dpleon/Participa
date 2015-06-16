@@ -23,12 +23,11 @@
         <!-- SCRIPT DE PROGRAMACION DEL MENU  -->
         <script type="text/javascript">
             $(document).ready(function(){
-                $('li#mnuTareas').click(function(){$('#col_central').load('modules/lstTareas.html');});
+                $('li#mnuTareas').click(function(){$('#col_central').load('modules/lstTareas.xhtml');});
                 $('li#mnuRecuperaciones').click(function(event){$('#col_central').load('modules/lstRecuperaciones.html');});
 
                 $('li#mnuLstObservaciones').click(function(event){$('#col_central').load('modules/lstObservaciones.html');});
                 $('li#mnuLstCitaciones').click(function(event){$('#col_central').load('modules/lstCitaciones.html');});
-                // $('li#mnuSanciones').click(function(event){$('#col_central').load('modules/lstSanciones.html');});
             });
         </script>
         <div class="article_title">
@@ -43,7 +42,6 @@
                 <li class="nivel1" id="">Disciplinaria</li>
                 <li class="nivel2" id="mnuLstObservaciones"><span class="badge">0</span>Observaciones</li>
                 <li class="nivel2" id="mnuLstCitaciones"><span class="badge sin_leer">1</span>Citaciones</li>
-                <!-- <li class="nivel2" id="mnuSanciones"><span class="badge">0</span>Sanciones</li> -->
             </ul>
         </div>
     </div>
